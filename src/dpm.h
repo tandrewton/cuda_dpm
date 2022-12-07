@@ -81,10 +81,6 @@ class dpm {
   std::vector<double> L;
   std::vector<bool> pbc;
 
-  // alternative boundary parameters: non-rectangular boundaries
-  std::vector<std::vector<double>> poly_bd_x;  // x coordinates of polygonal boundary condition (could be a triangle, square, n-0gon, star, etc.)
-  std::vector<std::vector<double>> poly_bd_y;  // set poly_x and poly_y by writing a function like generateCircularBoundary
-
   // particle shape parameters
   std::vector<double> a0;
   std::vector<double> l0;
@@ -176,7 +172,6 @@ class dpm {
   void com2D(int ci, double& cx, double& cy);
   double vertexPackingFraction2D();
   double vertexPreferredPackingFraction2D();
-  double vertexPreferredPackingFraction2D_polygon();
   double vertexKineticEnergy();
   int vvContacts();
   int ccContacts();
@@ -193,26 +188,6 @@ class dpm {
   void setl1(double val) { l1 = val; };
   void setl2(double val) { l2 = val; };
   void scaleL(int d, double val) { L.at(d) *= val; };
-  void scaleVelocities(double scalefactor) {
-    for (int i = 0; i < vertDOF; i++)
-      v[i] *= scalefactor;
-  }
-  void displaceCell(int ci, double displaceX, double displaceY) {
-    int firstIndex = szList[ci];
-    for (int gi = firstIndex; gi < firstIndex + nv[ci]; gi++) {
-      x[NDIM * gi] += displaceX;
-      x[NDIM * gi + 1] += displaceY;
-    }
-  }
-  void setCellVelocity(int ci, double velocityX, double velocityY) {
-    int firstIndex = szList[ci];
-    for (int gi = firstIndex; gi < firstIndex + nv[ci]; gi++) {
-      v[NDIM * gi] = velocityX;
-      v[NDIM * gi + 1] = velocityY;
-    }
-  }
-
-  void moveSimulationToPositiveCoordinates();
 
   // File openers
   void openPosObject(std::string& str) {
@@ -232,7 +207,7 @@ class dpm {
   void initializeVertexShapeParameters(double calA0, int nref);
   void initializeVertexShapeParameters(std::vector<double> calA0, int nref);
   void initializeVertexIndexing2D();
-  void initializePositions2D(double phi0, double Ftol, bool isFixedBoundary = false, double aspectRatio = 1.0, bool setUpCircularBoundary = false);
+  void initializePositions2D(double phi0, double Ftol, bool isFixedBoundary = false, double aspectRatio = 1.0);
   void initializeAllPositions(std::string vertexPositionFile, int nref);
   void initializeFromConfigurationFile(std::string vertexPositionFile, double phi0);
   void initializeNeighborLinkedList2D(double boxLengthScale);
@@ -242,19 +217,12 @@ class dpm {
   void scaleParticleSizes2D(double scaleFactor);
   int removeRattlers();
   void drawVelocities2D(double T);
-  double distanceLineAndPoint(double x1, double y1, double x2, double y2, double x0, double y0);
-  double distanceLinePointComponents(double x1, double y1, double x2, double y2, double x0, double y0, double& xcomp, double& ycomp);
-  double linePointDistancesAndProjection(double x1, double y1, double x2, double y2, double x0, double y0, double& xcomp, double& ycomp, double& contactType, double& x10, double& y10);
-  void generateCircularBoundary(int numEdges, double radius, double cx, double cy, std::vector<double>& poly_x, std::vector<double>& poly_y);
-  void generateCircle(int numEdges, double cx, double cy, double r, std::vector<double>& poly_x, std::vector<double>& poly_y);
-  std::vector<double> resample_polygon(std::vector<double> px, std::vector<double> py, double perimeter, int numPoints);
 
   // force definitions
   void resetForcesAndEnergy();
   void shapeForces2D();
   void vertexRepulsiveForces2D();
   void vertexAttractiveForces2D();
-  void evaluatePolygonalWallForces(const std::vector<double>& poly_x, const std::vector<double>& poly_y, bool attractionOn = false);
 
   // force updates
   void repulsiveForceUpdate();
@@ -266,10 +234,7 @@ class dpm {
 
   // protocols
   void vertexCompress2Target2D(dpmMemFn forceCall, double Ftol, double dt0, double phi0Target, double dphi0);
-  void vertexCompress2Target2D_polygon(dpmMemFn forceCall, double Ftol, double dt0, double phi0Target, double dphi0);
   void vertexJamming2D(dpmMemFn forceCall, double Ftol, double Ptol, double dt0, double dphi0, bool plotCompression);
-  void saveConfiguration(std::vector<double>& positionVector);
-  void loadConfiguration(std::vector<double>& positionVector);
 
   // print vertex information to file
   void printContactMatrix();

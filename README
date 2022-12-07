@@ -1,15 +1,14 @@
 This folder contains code for a CUDA-implementation of simple molecular dynamics routines.
-I'm reducing the scope to a FIRE-relaxation algorithm and a NVE algorithm rather than an
+I'm reducing the scope to an NVE algorithm rather than an
 entire biophysical simulation with complicated boundary conditions and energy functions.
 I'll keep my interaction simple, using purely repulsive forces.
 
 Since this is a CUDA program, this should be run on GPU-enabled systems.
 
-I have two programs. Each will initialize a simulation and the requisite parts on the Host CPU,
-then run force calculation and integration or energy minimization also on the Host CPU. As I progress
+I will initialize a simulation and the requisite parts on the Host CPU,
+then run force calculation and integration on the Host CPU. As I progress
 through the project, I will replace the following functions with CUDA kernels:
 
-FIREMinimize -> cudaFIREMinimize
 vertexRepulsiveForces2D -> vertexRepulsiveForces2D
 
 The Final Project report will consist of compilation and running instructions, my results from benchmarking
