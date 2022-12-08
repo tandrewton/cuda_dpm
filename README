@@ -13,4 +13,6 @@ vertexRepulsiveForces2D -> vertexRepulsiveForces2D
 
 The Final Project report will consist of compilation and running instructions, my results from benchmarking
 the size-dependence of my simulation reported in wallclock time, and a description of my serial and parallel
-algorithms. 
+algorithms.
+
+I have not decided whether to do this on my own GPU or using a GPU on Grace.
