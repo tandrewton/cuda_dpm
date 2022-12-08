@@ -15,4 +15,4 @@ The Final Project report will consist of compilation and running instructions, m
 the size-dependence of my simulation reported in wallclock time, and a description of my serial and parallel
 algorithms.
 
-I have not decided whether to do this on my own GPU or using a GPU on Grace.
+I have not decided whether to do this on my own GPU or using a GPU on Grace. Will try on my own GPU since Grace has been down.
