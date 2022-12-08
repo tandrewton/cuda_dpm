@@ -17,9 +17,6 @@ int main() {
   double phi0 = 0.6, calA0 = 1.2, smallfrac = 0.5, sizefrac = 1.4, Ftol = 1e-12, Ptol = 1e-8, dt0 = 1e-2;
   double ka = 1.0, kl = 1.0, kb = 0.1, kc = 1.0, thA = 12.0, thK = 3.0, boxLengthScale = 2.5, l1 = 0.0, l2 = 0.0;
 
-  // options for attraction
-  bool useAttraction = 1;
-
   // pointer to dpm member function (should pt to null)
   dpmMemFn forceUpdate = nullptr;
 
@@ -46,15 +43,7 @@ int main() {
   configobj2D.setkb(kb);
   configobj2D.setkc(kc);
 
-  if (useAttraction) {
-    // attractive force update
-    forceUpdate = &dpm::attractiveForceUpdate;
-    l1 = 0.01;
-    l2 = 0.02;
-    configobj2D.setl1(l1);
-    configobj2D.setl2(l2);
-  } else
-    forceUpdate = &dpm::repulsiveForceUpdate;
+  forceUpdate = &dpm::repulsiveForceUpdate;
 
   // initialize particles are bidisperse
   // configobj2D.bidisperse2D(calA0, nsmall, smallfrac, sizefrac);
