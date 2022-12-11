@@ -45,12 +45,7 @@ int main() {
 
   forceUpdate = &dpm::repulsiveForceUpdate;
 
-  // initialize particles are bidisperse
-  // configobj2D.bidisperse2D(calA0, nsmall, smallfrac, sizefrac);
   configobj2D.gaussian2D(0.0, calA0, nsmall);
-
-  // set preferred angle to sinusoidal
-  configobj2D.sinusoidalPreferredAngle(thA, thK);
 
   // initialize particle positions
   configobj2D.initializePositions2D(phi0, Ftol);
@@ -60,10 +55,12 @@ int main() {
 
   // run NVE protocol which will output configuration and energy
   double T = 1e-4;
-  double ttotal = 100.0;
+  /*double ttotal = 100.0;
   double tskip = 10.0;
   int NT = (int)floor(ttotal / dt0);
-  int NPRINTSKIP = (int)floor(tskip / dt0);
+  int NPRINTSKIP = (int)floor(tskip / dt0);*/
+  int NT = 100;
+  int NPRINTSKIP = 0;
   configobj2D.vertexNVE2D(enout, forceUpdate, T, dt0, NT, NPRINTSKIP);
 
   // say goodbye

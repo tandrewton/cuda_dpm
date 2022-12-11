@@ -2395,32 +2395,6 @@ void dpm::setBlockGridDims(int dimBlock) {
   // need to make d_numVertices a __constant__ int?
 }*/
 
-__global__ void kernelVertexForces(double* radius, double* pos, double* force, double energy, int d_numVertices) {
-  /*what does this function need passed into it?
-  serial algorithm:
-  sort neighbor list
-  loop over a reference vertex in the neighbor list
-  access neighbor of reference vertex in the neighbor list
-  perform distance calculation
-  calculate force, energy
-  add to force vector
-  add to stresses
-
-  parallel algorithm:
-  get vertexID
-  loop over neighbor list IDs?
-  check for neighbors
-  call function for two-particle force function
-  */
-  int vertexID = blockIDx.x + blockDim.x * threadIdx.x;
-  printf("vertexID = %d", vertexID);
-  if (vertexID < d_numVertices) {
-    printf("vertexId %d > d_numVertices %d", vertexID, d_numVertices);
-    force[vertexID * NDIM] = 1.0;
-    force[vertexID * NDIM + 1] = 2.0;
-  }
-}
-
 void dpm::cudaVertexNVE(ofstream& enout, double T, double dt0, int NT, int NPRINTSKIP) {
   // strategy: looks mostly like vertexNVE2D, but uses a CUDA kernel to compute forces
   // local variables

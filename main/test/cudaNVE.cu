@@ -5,7 +5,7 @@
 
 // header files
 #include <cuda.h>
-#include "dpm.h"
+#include "cuda_dpm.h"
 
 // preprocessor macros
 #define NDIM 2
