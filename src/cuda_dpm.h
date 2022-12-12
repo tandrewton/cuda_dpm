@@ -1,5 +1,5 @@
-#ifndef DPM_H
-#define DPM_H
+#ifndef CUDA_DPM_H
+#define CUDA_DPM_H
 
 /*
 
