@@ -2475,11 +2475,11 @@ void dpm::setDeviceVariables(int numVerts, double boxlengthX, double boxlengthY,
   kc = spring_constant;
   cout << "NVTOT = " << NVTOT << ", L[0] = " << L[0] << ", kc = " << kc << ", rho0 = " << rho0 << '\n';
   cout << "before setting device variables: d_numVertices = " << d_numVertices << ", d_L[0] = " << d_L[0] << ", d_kc = " << d_kc << ", d_rho0 = " << d_rho0 << '\n';
-  /*cudaStatus = cudaMemcpyToSymbol(d_numVertices, &NVTOT, sizeof(NVTOT));
+  cudaStatus = cudaMemcpyToSymbol(&d_numVertices, &NVTOT, sizeof(NVTOT));
   // cudaError_t cudaStatus = cudaMemcpyToSymbol(d_numVertices, &numVerts, sizeof(numVerts));
   if (cudaStatus != cudaSuccess) {
     cout << "error: failed to read in NVTOT\n";
-  }*/
+  }
 
   printf("number of bytes to copy: %d %d %d %d \n", sizeof(NVTOT), 2 * sizeof(double), sizeof(rho0), sizeof(kc));
 
@@ -2488,12 +2488,12 @@ void dpm::setDeviceVariables(int numVerts, double boxlengthX, double boxlengthY,
     cout << "error: failed to read in L\n";
   }
 
-  cudaStatus = cudaMemcpyToSymbol(d_rho0, &rho0, sizeof(rho0));
+  cudaStatus = cudaMemcpyToSymbol(&d_rho0, &rho0, sizeof(rho0));
   if (cudaStatus != cudaSuccess) {
     cout << "error: failed to read in rho0\n";
   }
 
-  cudaStatus = cudaMemcpyToSymbol(d_kc, &kc, sizeof(kc));
+  cudaStatus = cudaMemcpyToSymbol(&d_kc, &kc, sizeof(kc));
   if (cudaStatus != cudaSuccess) {
     cout << "error: failed to read in kc\n";
   }
