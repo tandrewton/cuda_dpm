@@ -2481,6 +2481,8 @@ void dpm::setDeviceVariables(int numVerts, double boxlengthX, double boxlengthY,
     cout << "error: failed to read in NVTOT\n";
   }*/
 
+  printf("number of bytes to copy: %d %d %d %d \n", sizeof(NVTOT), 2 * sizeof(double), sizeof(rho0), sizeof(kc));
+
   cudaStatus = cudaMemcpyToSymbol(d_L, &L[0], 2 * sizeof(double));
   if (cudaStatus != cudaSuccess) {
     cout << "error: failed to read in L\n";
