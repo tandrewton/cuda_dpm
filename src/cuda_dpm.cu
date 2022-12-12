@@ -37,6 +37,7 @@ __global__ void kernelVertexForces(double* radius, double* pos, double* force, d
   */
   int vertexID = threadIdx.x + blockDim.x * blockIdx.x;
   int gi = vertexID;
+  int NDIM = 2;
   double sij, dx, dy, rij, fx, fy, ftmp;
 
   // memCpyToSymbol rho0, L[0], L[1], kc in set
@@ -44,7 +45,7 @@ __global__ void kernelVertexForces(double* radius, double* pos, double* force, d
   // printf("vertexID = %d\n", vertexID);
   if (vertexID < d_numVertices) {
     double thisRad, otherRad, interaction = 0;
-    double thisPos[2], otherPos[2];
+    double thisPos[NDIM], otherPos[NDIM];
     getVertexPos(vertexID, pos, thisPos);
     thisRad = radius[vertexID];
     // printf("vertexId %d > d_numVertices %d\n", vertexID, d_numVertices);
