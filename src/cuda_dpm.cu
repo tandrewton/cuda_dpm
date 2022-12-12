@@ -2468,7 +2468,7 @@ void dpm::setDeviceVariables() {
   // set device variables needed for force kernel
   double rho0 = sqrt(a0.at(0));
   cout << "NVTOT = " << NVTOT << ", L[0] = " << L[0] << ", kc = " << kc << ", rho0 = " << rho0 << '\n';
-  cout << "before setting device variables: d_numVertices = " << d_numVertices << ", d_L[0] = " << d_L[0] << ", d_kc = " << d_kc << ", d_rho0 = " << rho0 << '\n';
+  cout << "before setting device variables: d_numVertices = " << d_numVertices << ", d_L[0] = " << d_L[0] << ", d_kc = " << d_kc << ", d_rho0 = " << d_rho0 << '\n';
   cudaError_t cudaStatus = cudaMemcpyToSymbol(d_numVertices, &NVTOT, sizeof(NVTOT));
   if (cudaStatus != cudaSuccess) {
     cout << "error: failed to read in NVTOT\n";
@@ -2489,7 +2489,7 @@ void dpm::setDeviceVariables() {
     cout << "error: failed to read in kc\n";
   }
 
-  cout << "after setting device variables: d_numVertices = " << d_numVertices << ", d_L[0] = " << d_L[0] << ", d_kc = " << d_kc << ", d_rho0 = " << rho0 << '\n';
+  cout << "after setting device variables: d_numVertices = " << d_numVertices << ", d_L[0] = " << d_L[0] << ", d_kc = " << d_kc << ", d_rho0 = " << d_rho0 << '\n';
 }
 
 void dpm::cudaVertexNVE(ofstream& enout, double T, double dt0, int NT, int NPRINTSKIP) {
