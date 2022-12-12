@@ -44,7 +44,7 @@ __global__ void kernelVertexForces(double* radius, double* pos, double* force, d
   // printf("vertexID = %d\n", vertexID);
   if (vertexID < d_numVertices) {
     double thisRad, otherRad, interaction = 0;
-    double thisPos[d_NDIM], otherPos[d_NDIM];
+    double thisPos[2], otherPos[2];
     getVertexPos(vertexID, pos, thisPos);
     thisRad = radius[vertexID];
     // printf("vertexId %d > d_numVertices %d\n", vertexID, d_numVertices);
