@@ -2427,7 +2427,7 @@ void dpm::vertexNVE2D(ofstream& enout, dpmMemFn forceCall, double T, double dt0,
     auto t2 = high_resolution_clock::now();
 
     duration<double, std::milli> ms_double = t2 - t1;
-    std::cout << "Time to calculate results on GPU = " << ms_double.count() << " ms\n";
+    std::cout << "Time to calculate results on CPU = " << ms_double.count() << " ms\n";
 
     // VV VELOCITY UPDATE #2
     for (i = 0; i < vertDOF; i++)
