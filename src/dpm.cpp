@@ -2386,6 +2386,11 @@ void dpm::vertexNVE2D(ofstream& enout, dpmMemFn forceCall, double T, double dt0,
   int t, i;
   double K, simclock;
 
+  using std::chrono::duration;
+  using std::chrono::duration_cast;
+  using std::chrono::high_resolution_clock;
+  using std::chrono::milliseconds;
+
   // set time step magnitude
   setdt(dt0);
 
@@ -2413,9 +2418,16 @@ void dpm::vertexNVE2D(ofstream& enout, dpmMemFn forceCall, double T, double dt0,
         x[i] += L[i % NDIM];
     }
 
+    auto t1 = high_resolution_clock::now();
+
     // FORCE UPDATE
     CALL_MEMBER_FN(*this, forceCall)
     ();
+
+    auto t2 = high_resolution_clock::now();
+
+    duration<double, std::milli> ms_double = t2 - t1;
+    std::cout << "Time to calculate results on GPU = " << ms_double.count() << " ms\n";
 
     // VV VELOCITY UPDATE #2
     for (i = 0; i < vertDOF; i++)

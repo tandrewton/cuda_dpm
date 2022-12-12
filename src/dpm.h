@@ -16,6 +16,7 @@
 
 */
 
+#include <chrono>  // for timing
 #include <cmath>
 #include <cstdlib>
 #include <fstream>
