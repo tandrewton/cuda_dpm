@@ -2477,7 +2477,7 @@ void dpm::setDeviceVariables(int numVerts, double boxlengthX, double boxlengthY,
   double temp_kc = spring_constant;
 
   cout << "NVTOT = " << temp_NVTOT << ", L[0] = " << temp_L[0] << ", kc = " << temp_kc << ", rho0 = " << temp_rho0 << '\n';
-  cout << "before setting device variables: d_numVertices = " << d_numVertices << ", d_L[0] = " << d_L[0] << ", d_kc = " << d_kc << ", d_rho0 = " << d_rho0 << '\n';
+  printf("before setting device variables: d_numVertices = %d, d_L[0] = %f, d_kc = %f, d_rho0 = %f\n", d_numVertices, d_L[0], d_kc, d_rho0);
 
   cudaStatus = cudaMemcpyToSymbol(d_numVertices, &temp_NVTOT, sizeof(int));
   if (cudaStatus != cudaSuccess) {
@@ -2505,7 +2505,7 @@ void dpm::setDeviceVariables(int numVerts, double boxlengthX, double boxlengthY,
     cout << cudaGetErrorString(cudaStatus) << '\n';
   }
 
-  cout << "after setting device variables: d_numVertices = " << d_numVertices << ", d_L[0] = " << d_L[0] << ", d_kc = " << d_kc << ", d_rho0 = " << d_rho0 << '\n';
+  printf("after setting device variables: d_numVertices = %d, d_L[0] = %f, d_kc = %f, d_rho0 = %f\n", d_numVertices, d_L[0], d_kc, d_rho0);
 }
 
 void dpm::cudaVertexNVE(ofstream& enout, double T, double dt0, int NT, int NPRINTSKIP) {
