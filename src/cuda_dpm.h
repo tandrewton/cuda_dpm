@@ -15,7 +15,11 @@
 
 using namespace std;
 
-__constant__ int NDIM = 2;
+__constant__ int d_NDIM = 2;
+__constant__ double d_rho0;
+__constant__ double d_L[2];
+__constant__ double d_kc;
+__constant__ int d_numVertices;
 
 class dpm;
 typedef void (dpm::*dpmMemFn)(void);
@@ -185,6 +189,7 @@ class dpm {
   // cuda setters
   void setDeviceVariables();
   void setBlockGridDims(int dimBlock);
+  void setDeviceVariables();
   void cudaVertexNVE(ofstream& enout, double T, double dt0, int NT, int NPRINTSKIP);
 
   // File openers

@@ -14,7 +14,8 @@
 using namespace std;
 
 // cuda kernels
-__global__ void kernelVertexForces(double* radius, double* pos, double* force, double energy, int d_numVertices) {
+__global__ void kernelVertexForces(double* radius, double* pos, double* force, double energy) {
+  // compare to : vertexRepulsiveForces2D
   /*what does this function need passed into it?
   serial algorithm:
   sort neighbor list
@@ -30,14 +31,60 @@ __global__ void kernelVertexForces(double* radius, double* pos, double* force, d
   loop over neighbor list IDs?
   check for neighbors
   call function for two-particle force function
+
+  parallel algorithm 2: don't sort the neighbor list?
+  cudaMemCpyToSymbol all of the relevant values like rho0, L[0], L[1], kc
   */
-  // why not : threadIdx.x + blockDim.x * blockIdx.x ?
   int vertexID = threadIdx.x + blockDim.x * blockIdx.x;
+  int gi = vertexID;
+  double sij, dx, dy, rij, fx, fy, ftmp;
+
+  // memCpyToSymbol rho0, L[0], L[1], kc in set
+
   // printf("vertexID = %d\n", vertexID);
   if (vertexID < d_numVertices) {
+    double thisRad, otherRad, interaction = 0;
+    double thisPos[NDIM], otherPos[NDIM];
+    getVertexPos(vertexID, pos, thisPos);
+    thisRad = radius[vertexID];
     // printf("vertexId %d > d_numVertices %d\n", vertexID, d_numVertices);
     force[vertexID * NDIM] = 1.0;
     force[vertexID * NDIM + 1] = 2.0;
+
+    for (int gj = 0; gj < d_numVertices; gj++) {
+      // contact distance
+      sij = thisRad + radius[gj];
+      // particle distance
+      dx = pos[NDIM * gj] - pos[NDIM * gi];
+      dx -= d_L[0] * round(dx / d_L[0]);
+      if (dx < sij) {
+        dy = pos[NDIM * gj + 1] - pos[NDIM * gi + 1];
+        dy -= L[1] * round(dy / L[1]);
+        if (dy < sij) {
+          rij = sqrt(dx * dx + dy * dy);
+          if (rij < sij) {
+            // force scale
+            ftmp = d_kc * (1 - (rij / sij)) * (d_rho0 / sij);
+            fx = ftmp * (dx / rij);
+            fy = ftmp * (dy / rij);
+
+            // add to forces
+            force[NDIM * gi] -= fx;
+            force[NDIM * gi + 1] -= fy;
+            // in serial code, would use Newton's second law to cut computation in half. Here, we just go through all particles and don't take advantage of double counting
+
+            // store the energy of half the interaction. the other half comes when we double count gi-gj as gj-gi
+            energy += 0.5 * 0.5 * kc * pow((1 - (rij / sij)), 2.0);
+          }
+        }
+      }
+    }
+  }
+}
+
+inline __device__ void getVertexPos(const long vId, const double* pos, double* vPos) {
+  for (long dim = 0; dim < d_nDim; dim++) {
+    vPos[dim] = pos[vId * d_nDim + dim];
   }
 }
 
@@ -2416,12 +2463,17 @@ void dpm::setBlockGridDims(int dimBlock) {
   dimGrid = (NVTOT + dimBlock - 1) / dimBlock;
   cout << "setting blockDim = " << dimBlock << '\n';
   cout << "setting gridDim = " << dimGrid << '\n';
+  // cudaMemCpyToSymbol
 }
 
-/*void dpm::setDeviceVariables() {
+void dpm::setDeviceVariables() {
+  // set device variables needed for force kernel
+  double rho0 = sqrt(a0.at(0));
   cudaMemcpyToSymbol(d_numVertices, &(NVTOT), sizeof(NVTOT));
-  // need to make d_numVertices a __constant__ int?
-}*/
+  cudaMemcpyToSymbol(d_L, &L[0], 2 * sizeof(double));
+  cudaMemcpyToSymbol(d_rho0, &(rho0), sizeof(rho0));
+  cudaMemcpyToSymbol(d_kc, &(kc), sizeof(kc));
+}
 
 void dpm::cudaVertexNVE(ofstream& enout, double T, double dt0, int NT, int NPRINTSKIP) {
   // strategy: looks mostly like vertexNVE2D, but uses a CUDA kernel to compute forces
@@ -2432,7 +2484,9 @@ void dpm::cudaVertexNVE(ofstream& enout, double T, double dt0, int NT, int NPRIN
   cudaEvent_t start, stop;  // using cuda events to measure time
   float elapsed_time_ms;    // which is applicable for asynchronous code also
 
+  // calls to set cuda-related variables
   setBlockGridDims(dimBlock);
+  setDeviceVariables();
 
   // set time step magnitude
   setdt(dt0);
@@ -2472,7 +2526,6 @@ void dpm::cudaVertexNVE(ofstream& enout, double T, double dt0, int NT, int NPRIN
     size_t sizeF = F.size() * sizeof(double);
     double energy = 0.0;
 
-    cout << "calling cudaMalloc!\n";
     cudaMalloc((void**)&dev_r, sizeR);  // allocate memory on device
     cudaMalloc((void**)&dev_x, sizeX);
     cudaMalloc((void**)&dev_F, sizeF);
@@ -2486,6 +2539,11 @@ void dpm::cudaVertexNVE(ofstream& enout, double T, double dt0, int NT, int NPRIN
     cudaEventCreate(&start);  // instrument code to measure start time
     cudaEventCreate(&stop);
     cudaEventRecord(start, 0);
+
+    // these are done serially (for now), can be made parallel in future work
+    // timed for fairness in comparing speeds with serial code
+    resetForcesAndEnergy();
+    shapeForces2D();
 
     // FORCE UPDATE
     kernelVertexForces<<<dimGrid, dimBlock>>>(dev_r, dev_x, dev_F, energy, NVTOT);
