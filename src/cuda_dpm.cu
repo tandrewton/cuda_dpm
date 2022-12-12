@@ -2469,7 +2469,11 @@ void dpm::setDeviceVariables() {
   double rho0 = sqrt(a0.at(0));
   cout << "NVTOT = " << NVTOT << ", kc = " << kc << '\n';
   cout << "before setting device variables: d_numVertices = " << d_numVertices << ", d_kc = " << d_kc << '\n';
-  cudaMemcpyToSymbol(&d_numVertices, &(NVTOT), sizeof(NVTOT));
+  cudaError_t cudaStatus = cudaMemcpyToSymbol(&d_numVertices, &(NVTOT), sizeof(NVTOT));
+  if (cudaStatus != cudaSuccess) {
+    cout << "failed to read in NVTOT\n";
+    return 1;
+  }
   cudaMemcpyToSymbol(&d_L[0], &L[0], 2 * sizeof(double));
   cudaMemcpyToSymbol(&d_rho0, &(rho0), sizeof(rho0));
   cudaMemcpyToSymbol(&d_kc, &(kc), sizeof(kc));
