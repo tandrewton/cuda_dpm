@@ -42,6 +42,8 @@ __global__ void kernelVertexForces(double* radius, double* pos, double* force, d
 
   // memCpyToSymbol rho0, L[0], L[1], kc in set
 
+  printf("d_numVertices %d, vertexID %d", d_numVertices, vertexID);
+
   // printf("vertexID = %d\n", vertexID);
   if (vertexID < d_numVertices) {
     double thisRad, otherRad, interaction = 0;
