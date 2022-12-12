@@ -2467,11 +2467,13 @@ void dpm::setBlockGridDims(int dimBlock) {
 void dpm::setDeviceVariables() {
   // set device variables needed for force kernel
   double rho0 = sqrt(a0.at(0));
+  cout << "NVTOT = " << NVTOT << ", kc = " << kc << '\n';
   cout << "before setting device variables: d_numVertices = " << d_numVertices << ", d_kc = " << d_kc << '\n';
   cudaMemcpyToSymbol(&d_numVertices, &(NVTOT), sizeof(NVTOT));
   cudaMemcpyToSymbol(&d_L[0], &L[0], 2 * sizeof(double));
   cudaMemcpyToSymbol(&d_rho0, &(rho0), sizeof(rho0));
   cudaMemcpyToSymbol(&d_kc, &(kc), sizeof(kc));
+  cout << "NVTOT = " << NVTOT << ", kc = " << kc << '\n';
   cout << "after setting device variables: d_numVertices = " << d_numVertices << ", d_kc = " << d_kc << '\n';
 }
 
