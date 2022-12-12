@@ -2477,7 +2477,6 @@ void dpm::setDeviceVariables() {
   cout << "after setting device variables: d_numVertices = " << d_numVertices << ", d_kc = " << d_kc << '\n';
   if (cudaStatus != cudaSuccess) {
     cout << "failed to read in NVTOT\n";
-    return 1;
   }
 }
 
