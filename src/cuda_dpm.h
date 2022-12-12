@@ -16,10 +16,10 @@
 using namespace std;
 
 __device__ __constant__ int d_NDIM = 2;
+__device__ __constant__ int d_numVertices;
 __device__ __constant__ double d_rho0;
 __device__ __constant__ double d_L[2];
 __device__ __constant__ double d_kc;
-__device__ __constant__ int d_numVertices;
 
 class dpm;
 typedef void (dpm::*dpmMemFn)(void);
