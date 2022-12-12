@@ -45,6 +45,12 @@ const int NNEGMAX = 1000;
 const int NDELAY = 20;
 const int itmax = 5e7;
 
+inline __device__ void getVertexPos(const long vId, const double* pos, double* vPos) {
+  for (long dim = 0; dim < d_nDim; dim++) {
+    vPos[dim] = pos[vId * d_nDim + dim];
+  }
+}
+
 class dpm {
  protected:
   // int scalars

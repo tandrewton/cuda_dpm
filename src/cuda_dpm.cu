@@ -59,7 +59,7 @@ __global__ void kernelVertexForces(double* radius, double* pos, double* force, d
       dx -= d_L[0] * round(dx / d_L[0]);
       if (dx < sij) {
         dy = pos[NDIM * gj + 1] - pos[NDIM * gi + 1];
-        dy -= L[1] * round(dy / L[1]);
+        dy -= d_L[1] * round(dy / d_L[1]);
         if (dy < sij) {
           rij = sqrt(dx * dx + dy * dy);
           if (rij < sij) {
@@ -74,17 +74,11 @@ __global__ void kernelVertexForces(double* radius, double* pos, double* force, d
             // in serial code, would use Newton's second law to cut computation in half. Here, we just go through all particles and don't take advantage of double counting
 
             // store the energy of half the interaction. the other half comes when we double count gi-gj as gj-gi
-            energy += 0.5 * 0.5 * kc * pow((1 - (rij / sij)), 2.0);
+            energy += 0.5 * 0.5 * d_kc * pow((1 - (rij / sij)), 2.0);
           }
         }
       }
     }
-  }
-}
-
-inline __device__ void getVertexPos(const long vId, const double* pos, double* vPos) {
-  for (long dim = 0; dim < d_nDim; dim++) {
-    vPos[dim] = pos[vId * d_nDim + dim];
   }
 }
 
