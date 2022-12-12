@@ -2484,7 +2484,7 @@ void dpm::setDeviceVariables(int numVerts, double boxlengthX, double boxlengthY,
     cout << cudaGetErrorString(cudaStatus) << '\n';
   }
 
-  printf("number of bytes to copy: %d %d %d %d \n", sizeof(NVTOT), 2 * sizeof(double), sizeof(rho0), sizeof(kc));
+  printf("number of bytes to copy: %d %d %d %d \n", sizeof(temp_NVTOT), 2 * sizeof(double), sizeof(temp_rho0), sizeof(temp_kc));
 
   cudaStatus = cudaMemcpyToSymbol(d_L, &temp_L[0], 2 * sizeof(double));
   if (cudaStatus != cudaSuccess) {
