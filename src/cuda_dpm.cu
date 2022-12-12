@@ -2470,14 +2470,27 @@ void dpm::setDeviceVariables() {
   cout << "NVTOT = " << NVTOT << ", kc = " << kc << ", rho0 = " << rho0 << '\n';
   cout << "before setting device variables: d_numVertices = " << d_numVertices << ", d_kc = " << d_kc << ", d_rho0 = " << rho0 << '\n';
   cudaError_t cudaStatus = cudaMemcpyToSymbol(d_numVertices, &NVTOT, sizeof(NVTOT));
-  cudaMemcpyToSymbol(d_L, &L[0], 2 * sizeof(double));
-  cudaMemcpyToSymbol(d_rho0, &rho0, sizeof(rho0));
-  cudaMemcpyToSymbol(d_kc, &kc, sizeof(kc));
-  cout << "NVTOT = " << NVTOT << ", kc = " << kc << '\n';
-  cout << "after setting device variables: d_numVertices = " << d_numVertices << ", d_kc = " << d_kc << ", d_rho0 = " << rho0 << '\n';
   if (cudaStatus != cudaSuccess) {
     cout << "error: failed to read in NVTOT\n";
   }
+
+  cudaStatus = cudaMemcpyToSymbol(d_L, &L[0], 2 * sizeof(double));
+  if (cudaStatus != cudaSuccess) {
+    cout << "error: failed to read in L\n";
+  }
+
+  cudaStatus = cudaMemcpyToSymbol(d_rho0, &rho0, sizeof(rho0));
+  if (cudaStatus != cudaSuccess) {
+    cout << "error: failed to read in rho0\n";
+  }
+
+  cudaStatus = cudaMemcpyToSymbol(d_kc, &kc, sizeof(kc));
+  if (cudaStatus != cudaSuccess) {
+    cout << "error: failed to read in kc\n";
+  }
+
+  cout << "NVTOT = " << NVTOT << ", kc = " << kc << '\n';
+  cout << "after setting device variables: d_numVertices = " << d_numVertices << ", d_kc = " << d_kc << ", d_rho0 = " << rho0 << '\n';
 }
 
 void dpm::cudaVertexNVE(ofstream& enout, double T, double dt0, int NT, int NPRINTSKIP) {
