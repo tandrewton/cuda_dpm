@@ -33,9 +33,9 @@ __global__ void kernelVertexForces(double* radius, double* pos, double* force, d
   */
   // why not : threadIdx.x + blockDim.x * blockIdx.x ?
   int vertexID = blockIdx.x + blockDim.x * threadIdx.x;
-  printf("vertexID = %d", vertexID);
+  printf("vertexID = %d\n", vertexID);
   if (vertexID < d_numVertices) {
-    printf("vertexId %d > d_numVertices %d", vertexID, d_numVertices);
+    printf("vertexId %d > d_numVertices %d\n", vertexID, d_numVertices);
     force[vertexID * NDIM] = 1.0;
     force[vertexID * NDIM + 1] = 2.0;
   }
