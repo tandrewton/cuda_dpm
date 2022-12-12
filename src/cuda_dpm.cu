@@ -2469,10 +2469,10 @@ void dpm::setDeviceVariables() {
   double rho0 = sqrt(a0.at(0));
   cout << "NVTOT = " << NVTOT << ", kc = " << kc << '\n';
   cout << "before setting device variables: d_numVertices = " << d_numVertices << ", d_kc = " << d_kc << '\n';
-  cudaError_t cudaStatus = cudaMemcpyToSymbol("d_numVertices", &(NVTOT), sizeof(NVTOT), 0, cudaMemcpyHostToDevice);
-  cudaMemcpyToSymbol("d_L", L[0], 2 * sizeof(double), 0, cudaMemcpyHostToDevice);
-  cudaMemcpyToSymbol("d_rho0", &rho0, sizeof(rho0), 0, cudaMemcpyHostToDevice);
-  cudaMemcpyToSymbol("d_kc", &kc, sizeof(kc), 0, cudaMemcpyHostToDevice);
+  cudaError_t cudaStatus = cudaMemcpyToSymbol(d_numVertices, &(NVTOT), sizeof(NVTOT), 0, cudaMemcpyHostToDevice);
+  cudaMemcpyToSymbol(d_L, &L[0], 2 * sizeof(double), 0, cudaMemcpyHostToDevice);
+  cudaMemcpyToSymbol(d_rho0, &rho0, sizeof(rho0), 0, cudaMemcpyHostToDevice);
+  cudaMemcpyToSymbol(d_kc, &kc, sizeof(kc), 0, cudaMemcpyHostToDevice);
   cout << "NVTOT = " << NVTOT << ", kc = " << kc << '\n';
   cout << "after setting device variables: d_numVertices = " << d_numVertices << ", d_kc = " << d_kc << '\n';
   if (cudaStatus != cudaSuccess) {
