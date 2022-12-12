@@ -2470,7 +2470,7 @@ void dpm::setDeviceVariables(int numVerts, double boxlengthX, double boxlengthY,
   // set device variables needed for force kernel
   cudaError_t cudaStatus;
 
-  long temp_NVTOT = numVerts;
+  int temp_NVTOT = numVerts;
   double temp_L[2];
   temp_L[0] = boxlengthX;
   temp_L[1] = boxlengthY;
@@ -2480,19 +2480,7 @@ void dpm::setDeviceVariables(int numVerts, double boxlengthX, double boxlengthY,
   cout << "NVTOT = " << temp_NVTOT << ", L[0] = " << temp_L[0] << ", kc = " << temp_kc << ", rho0 = " << temp_rho0 << '\n';
   // printf("before setting device variables: d_numVertices = %d, d_L[0] = %f, d_kc = %f, d_rho0 = %f\n", d_numVertices, d_L[0], d_kc, d_rho0);
 
-  cudaStatus = cudaMemcpyToSymbol(d_numVertices, &temp_NVTOT, sizeof(temp_NVTOT));
-  if (cudaStatus != cudaSuccess) {
-    cout << "error: failed to read in NVTOT\n";
-    cout << cudaGetErrorString(cudaStatus) << '\n';
-  }
-
   printf("number of bytes to copy: %d %d %d %d \n", sizeof(temp_NVTOT), 2 * sizeof(double), sizeof(temp_rho0), sizeof(temp_kc));
-
-  cudaStatus = cudaMemcpyToSymbol(d_L, temp_L, 2 * sizeof(double));
-  if (cudaStatus != cudaSuccess) {
-    cout << "error: failed to read in L\n";
-    cout << cudaGetErrorString(cudaStatus) << '\n';
-  }
 
   cudaStatus = cudaMemcpyToSymbol(d_rho0, &temp_rho0, sizeof(double));
   if (cudaStatus != cudaSuccess) {
@@ -2503,6 +2491,18 @@ void dpm::setDeviceVariables(int numVerts, double boxlengthX, double boxlengthY,
   cudaStatus = cudaMemcpyToSymbol(d_kc, &temp_kc, sizeof(double));
   if (cudaStatus != cudaSuccess) {
     cout << "error: failed to read in kc\n";
+    cout << cudaGetErrorString(cudaStatus) << '\n';
+  }
+
+  cudaStatus = cudaMemcpyToSymbol(d_numVertices, &temp_NVTOT, sizeof(temp_NVTOT));
+  if (cudaStatus != cudaSuccess) {
+    cout << "error: failed to read in NVTOT\n";
+    cout << cudaGetErrorString(cudaStatus) << '\n';
+  }
+
+  cudaStatus = cudaMemcpyToSymbol(d_L, temp_L, 2 * sizeof(double));
+  if (cudaStatus != cudaSuccess) {
+    cout << "error: failed to read in L\n";
     cout << cudaGetErrorString(cudaStatus) << '\n';
   }
 
