@@ -7,7 +7,7 @@
 
 NVCC = nvcc
 
-NVCCFLAGS = -O3 -Wno-deprecated-gpu-targets -g
+NVCCFLAGS = -O3 -Wno-deprecated-gpu-targets -g --expt-extended-lambda --expt-relaxed-constexpr
 
 LFLAGS = -lm -Wno-deprecated-gpu-targets -g -lcudart
 
