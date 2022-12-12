@@ -44,7 +44,7 @@ __global__ void kernelVertexForces(double* radius, double* pos, double* force, d
   // printf("vertexID = %d\n", vertexID);
   if (vertexID < d_numVertices) {
     double thisRad, otherRad, interaction = 0;
-    double thisPos[NDIM], otherPos[NDIM];
+    double thisPos[d_NDIM], otherPos[d_NDIM];
     getVertexPos(vertexID, pos, thisPos);
     thisRad = radius[vertexID];
     // printf("vertexId %d > d_numVertices %d\n", vertexID, d_numVertices);
@@ -2540,7 +2540,7 @@ void dpm::cudaVertexNVE(ofstream& enout, double T, double dt0, int NT, int NPRIN
     shapeForces2D();
 
     // FORCE UPDATE
-    kernelVertexForces<<<dimGrid, dimBlock>>>(dev_r, dev_x, dev_F, energy, NVTOT);
+    kernelVertexForces<<<dimGrid, dimBlock>>>(dev_r, dev_x, dev_F, energy);
 
     cudaEventRecord(stop, 0);  // instrument code to measure end time
     cudaEventSynchronize(stop);
@@ -2550,6 +2550,8 @@ void dpm::cudaVertexNVE(ofstream& enout, double T, double dt0, int NT, int NPRIN
     cudaMemcpy(&F[0], dev_F, sizeF, cudaMemcpyDeviceToHost);
 
     printf("Time to calculate results on GPU: %f ms.\n", elapsed_time_ms);  // exec. time
+
+    U += energy;
 
     // VV VELOCITY UPDATE #2
     for (i = 0; i < vertDOF; i++)
