@@ -2470,9 +2470,9 @@ void dpm::setDeviceVariables() {
   cout << "NVTOT = " << NVTOT << ", kc = " << kc << '\n';
   cout << "before setting device variables: d_numVertices = " << d_numVertices << ", d_kc = " << d_kc << '\n';
   cudaError_t cudaStatus = cudaMemcpyToSymbol(d_numVertices, &NVTOT, sizeof(NVTOT));
-  cudaMemcpyToSymbol(d_L, &L[0], 2 * sizeof(double));
-  cudaMemcpyToSymbol(d_rho0, &rho0, sizeof(rho0));
-  cudaMemcpyToSymbol(d_kc, &kc, sizeof(kc));
+  // cudaMemcpyToSymbol(d_L, &L[0], 2 * sizeof(double));
+  // cudaMemcpyToSymbol(d_rho0, &rho0, sizeof(rho0));
+  // cudaMemcpyToSymbol(d_kc, &kc, sizeof(kc));
   cout << "NVTOT = " << NVTOT << ", kc = " << kc << '\n';
   cout << "after setting device variables: d_numVertices = " << d_numVertices << ", d_kc = " << d_kc << '\n';
   if (cudaStatus != cudaSuccess) {
@@ -2492,7 +2492,6 @@ void dpm::cudaVertexNVE(ofstream& enout, double T, double dt0, int NT, int NPRIN
   // calls to set cuda-related variables
   setBlockGridDims(dimBlock);
   setDeviceVariables();
-  __syncthreads();
 
   // set time step magnitude
   setdt(dt0);
