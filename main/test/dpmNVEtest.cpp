@@ -2,6 +2,7 @@
 //
 // Compilation command:
 // g++ -O3 --std=c++11 -I src main/test/dpmNVEtest.cpp src/*.cpp -o test.o
+// g++ -O3 --std=c++11 -I src main/test/dpmNVEtest.cpp src/dpm.cpp -o test.o
 
 // header files
 #include "dpm.h"

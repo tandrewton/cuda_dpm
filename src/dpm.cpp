@@ -1014,7 +1014,7 @@ void dpm::initializeFromConfigurationFile(std::string vertexPositionFile, double
   // set box size
   for (int d = 0; d < NDIM; d++) {
     // L.at(d) = pow(areaSum / phi0, 1.0 / NDIM);
-    double max = *max_element(x.begin(), x.end());
+    double max = *std::max_element(x.begin(), x.end());
     L.at(d) = 1.1 * max;
   }
 }
