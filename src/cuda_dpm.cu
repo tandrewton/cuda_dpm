@@ -2492,6 +2492,7 @@ void dpm::cudaVertexNVE(ofstream& enout, double T, double dt0, int NT, int NPRIN
   // calls to set cuda-related variables
   setBlockGridDims(dimBlock);
   setDeviceVariables();
+  __syncthreads();
 
   // set time step magnitude
   setdt(dt0);
