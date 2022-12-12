@@ -2464,11 +2464,11 @@ void dpm::setBlockGridDims(int dimBlock) {
   // cudaMemCpyToSymbol
 }
 
-void dpm::setDeviceVariables(int numVerts, double* boxlength, double density, double spring_constant) {
+void dpm::setDeviceVariables(int numVerts, double boxlengthX, double boxlengthY, double density, double spring_constant) {
   // set device variables needed for force kernel
-
   NVTOT = numVerts;
-  L = boxlength;
+  L[0] = boxlengthX;
+  L[1] = boxLengthY;
   double rho0 = density;
   kc = spring_constant;
   cout << "NVTOT = " << NVTOT << ", L[0] = " << L[0] << ", kc = " << kc << ", rho0 = " << rho0 << '\n';
@@ -2508,7 +2508,7 @@ void dpm::cudaVertexNVE(ofstream& enout, double T, double dt0, int NT, int NPRIN
 
   // calls to set cuda-related variables
   setBlockGridDims(dimBlock);
-  setDeviceVariables(NVTOT, L, sqrt(a0[0]), kc);
+  setDeviceVariables(NVTOT, L[0], L[1], sqrt(a0[0]), kc);
 
   // set time step magnitude
   setdt(dt0);
