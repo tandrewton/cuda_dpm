@@ -2460,7 +2460,7 @@ void dpm::cudaVertexNVE(ofstream& enout, double T, double dt0, int NT, int NPRIN
 
     printf("Launching kernel\n");
     // FORCE UPDATE
-    kernelVertexForces<<<dimGrid, dimBlock>>>(dev_r, dev_x, dev_F, energy, NVTOT);
+    // kernelVertexForces<<<dimGrid, dimBlock>>>(dev_r, dev_x, dev_F, energy, NVTOT);
 
     cudaEventRecord(stop, 0);  // instrument code to measure end time
     cudaEventSynchronize(stop);
