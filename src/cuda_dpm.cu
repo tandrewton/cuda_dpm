@@ -2470,15 +2470,15 @@ void dpm::setDeviceVariables() {
   cout << "NVTOT = " << NVTOT << ", kc = " << kc << '\n';
   cout << "before setting device variables: d_numVertices = " << d_numVertices << ", d_kc = " << d_kc << '\n';
   cudaError_t cudaStatus = cudaMemcpyToSymbol(&d_numVertices, &(NVTOT), sizeof(NVTOT));
-  if (cudaStatus != cudaSuccess) {
-    cout << "failed to read in NVTOT\n";
-    return 1;
-  }
   cudaMemcpyToSymbol(&d_L[0], &L[0], 2 * sizeof(double));
   cudaMemcpyToSymbol(&d_rho0, &(rho0), sizeof(rho0));
   cudaMemcpyToSymbol(&d_kc, &(kc), sizeof(kc));
   cout << "NVTOT = " << NVTOT << ", kc = " << kc << '\n';
   cout << "after setting device variables: d_numVertices = " << d_numVertices << ", d_kc = " << d_kc << '\n';
+  if (cudaStatus != cudaSuccess) {
+    cout << "failed to read in NVTOT\n";
+    return 1;
+  }
 }
 
 void dpm::cudaVertexNVE(ofstream& enout, double T, double dt0, int NT, int NPRINTSKIP) {
