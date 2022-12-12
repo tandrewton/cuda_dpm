@@ -7,7 +7,7 @@
 */
 
 #include <functional>
-#include "dpm.h"
+#include "cuda_dpm.h"
 
 // namespace
 using namespace std;
