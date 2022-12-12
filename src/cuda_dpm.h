@@ -28,6 +28,8 @@
 // pointer-to-member function call macro
 #define CALL_MEMBER_FN(object, ptrToMember) ((object).*(ptrToMember))
 
+using namespace std;
+
 class dpm;
 typedef void (dpm::*dpmMemFn)(void);
 
