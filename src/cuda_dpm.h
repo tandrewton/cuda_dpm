@@ -218,7 +218,8 @@ class dpm {
     check for neighbors
     call function for two-particle force function
     */
-    int vertexID = blockIDx.x + blockDim.x * threadIdx.x;
+    // why not : threadIdx.x + blockDim.x * blockIdx.x ?
+    int vertexID = blockIdx.x + blockDim.x * threadIdx.x;
     printf("vertexID = %d", vertexID);
     if (vertexID < d_numVertices) {
       printf("vertexId %d > d_numVertices %d", vertexID, d_numVertices);
