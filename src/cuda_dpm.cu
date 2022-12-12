@@ -32,7 +32,7 @@ __global__ void kernelVertexForces(double* radius, double* pos, double* force, d
   call function for two-particle force function
   */
   // why not : threadIdx.x + blockDim.x * blockIdx.x ?
-  int vertexID = threadIdx.x + blockDim.x * blockIDx.x;
+  int vertexID = threadIdx.x + blockDim.x * blockIdx.x;
   printf("vertexID = %d\n", vertexID);
   if (vertexID < d_numVertices) {
     printf("vertexId %d > d_numVertices %d\n", vertexID, d_numVertices);
