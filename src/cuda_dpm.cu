@@ -2476,7 +2476,7 @@ void dpm::setDeviceVariables(int numVerts, double boxlengthX, double boxlengthY,
 
   cout << "NVTOT = " << NVTOT << ", L[0] = " << L[0] << ", kc = " << kc << ", rho0 = " << rho0 << '\n';
   cout << "before setting device variables: d_numVertices = " << d_numVertices << ", d_L[0] = " << d_L[0] << ", d_kc = " << d_kc << ", d_rho0 = " << d_rho0 << '\n';
-  cudaStatus = cudaMemcpyToSymbol(d_numVertices, &NVTOT, sizeof(NVTOT));
+  /*cudaStatus = cudaMemcpyToSymbol(d_numVertices, &NVTOT, sizeof(NVTOT));
   // cudaError_t cudaStatus = cudaMemcpyToSymbol(d_numVertices, &numVerts, sizeof(numVerts));
   if (cudaStatus != cudaSuccess) {
     cout << "error: failed to read in NVTOT\n";
@@ -2489,7 +2489,7 @@ void dpm::setDeviceVariables(int numVerts, double boxlengthX, double boxlengthY,
   if (cudaStatus != cudaSuccess) {
     cout << "error: failed to read in L\n";
     cout << cudaGetErrorString(cudaStatus) << '\n';
-  }
+  }*/
 
   cudaStatus = cudaMemcpyToSymbol(d_rho0, &rho0, sizeof(rho0));
   if (cudaStatus != cudaSuccess) {
