@@ -2468,11 +2468,12 @@ void dpm::setDeviceVariables(int numVerts, double boxlengthX, double boxlengthY,
   // set device variables needed for force kernel
   cudaError_t cudaStatus;
 
-  NVTOT = numVerts;
+  int NVTOT = numVerts;
+  double L[2];
   L[0] = boxlengthX;
   L[1] = boxlengthY;
   double rho0 = density;
-  kc = spring_constant;
+  double kc = spring_constant;
 
   cout << "NVTOT = " << NVTOT << ", L[0] = " << L[0] << ", kc = " << kc << ", rho0 = " << rho0 << '\n';
   cout << "before setting device variables: d_numVertices = " << d_numVertices << ", d_L[0] = " << d_L[0] << ", d_kc = " << d_kc << ", d_rho0 = " << d_rho0 << '\n';
