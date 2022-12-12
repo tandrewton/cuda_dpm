@@ -1751,6 +1751,7 @@ void dpm::vertexRepulsiveForces2D() {
           if (dy < sij) {
             rij = sqrt(dx * dx + dy * dy);
             if (rij < sij) {
+              cout << "gi = " << vertexID << " interacting with gj = " << gj << '\n';
               // force scale
               ftmp = kc * (1 - (rij / sij)) * (rho0 / sij);
               fx = ftmp * (dx / rij);
@@ -1825,6 +1826,7 @@ void dpm::vertexRepulsiveForces2D() {
             if (dy < sij) {
               rij = sqrt(dx * dx + dy * dy);
               if (rij < sij) {
+                cout << "gi = " << vertexID << " interacting with gj = " << gj << '\n';
                 // force scale
                 ftmp = kc * (1 - (rij / sij)) * (rho0 / sij);
                 fx = ftmp * (dx / rij);

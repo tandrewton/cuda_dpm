@@ -64,6 +64,7 @@ __global__ void kernelVertexForces(double* radius, double* pos, double* force, d
         if (dy < sij) {
           rij = sqrt(dx * dx + dy * dy);
           if (rij < sij) {
+            cout << "gi = " << vertexID << " interacting with gj = " << gj << '\n';
             // force scale
             ftmp = d_kc * (1 - (rij / sij)) * (d_rho0 / sij);
             fx = ftmp * (dx / rij);
