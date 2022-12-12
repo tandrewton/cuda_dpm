@@ -193,7 +193,7 @@ class dpm {
   void scaleL(int d, double val) { L.at(d) *= val; };
 
   // cuda setters
-  void setDeviceVariables();
+  void setDeviceVariables(int numVerts, double* boxlength, double density, double spring_constant);
   void setBlockGridDims(int dimBlock);
   void cudaVertexNVE(ofstream& enout, double T, double dt0, int NT, int NPRINTSKIP);
 

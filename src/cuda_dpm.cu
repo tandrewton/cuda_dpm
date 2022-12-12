@@ -2464,12 +2464,17 @@ void dpm::setBlockGridDims(int dimBlock) {
   // cudaMemCpyToSymbol
 }
 
-void dpm::setDeviceVariables() {
+void dpm::setDeviceVariables(int numVerts, double* boxlength, double density, double spring_constant) {
   // set device variables needed for force kernel
-  double rho0 = sqrt(a0.at(0));
+
+  NVTOT = numVerts;
+  L = boxlength;
+  double rho0 = density;
+  kc = spring_constant;
   cout << "NVTOT = " << NVTOT << ", L[0] = " << L[0] << ", kc = " << kc << ", rho0 = " << rho0 << '\n';
   cout << "before setting device variables: d_numVertices = " << d_numVertices << ", d_L[0] = " << d_L[0] << ", d_kc = " << d_kc << ", d_rho0 = " << d_rho0 << '\n';
   cudaError_t cudaStatus = cudaMemcpyToSymbol(d_numVertices, &NVTOT, sizeof(NVTOT));
+  // cudaError_t cudaStatus = cudaMemcpyToSymbol(d_numVertices, &numVerts, sizeof(numVerts));
   if (cudaStatus != cudaSuccess) {
     cout << "error: failed to read in NVTOT\n";
   }
@@ -2503,7 +2508,7 @@ void dpm::cudaVertexNVE(ofstream& enout, double T, double dt0, int NT, int NPRIN
 
   // calls to set cuda-related variables
   setBlockGridDims(dimBlock);
-  setDeviceVariables();
+  setDeviceVariables(NVTOT, L, sqrt(a0[0]), kc);
 
   // set time step magnitude
   setdt(dt0);
