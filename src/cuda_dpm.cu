@@ -2381,7 +2381,7 @@ void dpm::vertexFIRE2D(dpmMemFn forceCall, double Ftol, double dt0) {
   }
 }
 
-void dpm::setBlockGridDims(int dimBlock) {
+void dpm::setBlockGridDims(long dimBlock) {
   // the argument determined the block dimension, we're going to use a 1D indexing for our kernel
   // gridDim is going to be approximately number of total vertices divided by the size of dimBlock
   //  with some additional algebra done to account for when NVTOT is not evenly divided by dimBlock
