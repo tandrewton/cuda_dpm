@@ -1716,15 +1716,11 @@ void dpm::vertexRepulsiveForces2D() {
 
   // loop over boxes in neighbor linked list
   for (bi = 0; bi < NBX; bi++) {
-    cout << "bi = " << bi << '\n';
-    cout << "pi = head[bi] = " << head[bi] << '\n';
     // get start of list of vertices
     pi = head[bi];
 
     // loop over linked list
     while (pi > 0) {
-      cout << "gi = pi - 1 = " << pi - 1 << '\n';
-      cout << "pj = list[pi] = " << list[pi] << '\n';
       // real particle index
       gi = pi - 1;
 
@@ -1733,7 +1729,6 @@ void dpm::vertexRepulsiveForces2D() {
 
       // loop down neighbors of pi in same cell
       while (pj > 0) {
-        cout << "gj = pj - 1 = " << pj - 1 << '\n';
         // real index of pj
         gj = pj - 1;
 
@@ -1800,18 +1795,15 @@ void dpm::vertexRepulsiveForces2D() {
 
       // test overlaps with forward neighboring cells
       for (bj = 0; bj < NNN; bj++) {
-        cout << "forward neighbor: bj = " << bj << '\n';
         // only check if boundaries permit
         if (nn[bi][bj] == -1)
           continue;
 
         // get first particle in neighboring cell
         pj = head[nn[bi][bj]];
-        cout << "forward neighbor: pj = " << pj << '\n';
 
         // loop down neighbors of pi in same cell
         while (pj > 0) {
-          cout << "forward neighbor: gj = pj - 1 = " << pj - 1 << '\n';
           // real index of pj
           gj = pj - 1;
 
@@ -1873,13 +1865,11 @@ void dpm::vertexRepulsiveForces2D() {
           }
 
           // update pj
-          cout << "update pj, pj = list[pj] = " << list[pj] << '\n';
           pj = list[pj];
         }
       }
 
       // update pi index to be next
-      cout << "update pi, pi = list[pi] = " << list[pi] << '\n';
       pi = list[pi];
     }
   }
