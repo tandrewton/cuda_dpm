@@ -2465,7 +2465,7 @@ void dpm::setBlockGridDims(int dimBlock) {
   // cudaMemCpyToSymbol
 }
 
-void dpm::setDeviceVariables(int numVerts, double boxlengthX, double boxlengthY, double density, double spring_constant) {
+void dpm::setDeviceVariables(double boxlengthX, double boxlengthY, double density) {
   cudaSetDevice(0);
   // set device variables needed for force kernel
   cudaError_t cudaStatus;
@@ -2480,9 +2480,9 @@ void dpm::setDeviceVariables(int numVerts, double boxlengthX, double boxlengthY,
   cout << "NVTOT = " << temp_NVTOT << ", L[0] = " << temp_L[0] << ", kc = " << temp_kc << ", rho0 = " << temp_rho0 << '\n';
   // printf("before setting device variables: d_numVertices = %d, d_L[0] = %f, d_kc = %f, d_rho0 = %f\n", d_numVertices, d_L[0], d_kc, d_rho0);
 
-  printf("number of bytes to copy: %d %d %d %d \n", sizeof(temp_NVTOT), 2 * sizeof(double), sizeof(temp_rho0), sizeof(temp_kc));
+  printf("number of bytes to copy: %d %d %d %d \n", sizeof(int32_t), 2 * sizeof(double), sizeof(temp_rho0), sizeof(temp_kc));
 
-  cudaStatus = cudaMemcpyToSymbol(d_numVertices, &temp_NVTOT, sizeof(temp_NVTOT));
+  cudaStatus = cudaMemcpyToSymbol(d_numVertices, &temp_NVTOT, sizeof(int));
   if (cudaStatus != cudaSuccess) {
     cout << "error: failed to read in NVTOT\n";
     cout << cudaGetErrorString(cudaStatus) << '\n';
@@ -2520,7 +2520,7 @@ void dpm::cudaVertexNVE(ofstream& enout, double T, double dt0, int NT, int NPRIN
 
   // calls to set cuda-related variables
   setBlockGridDims(dimBlock);
-  setDeviceVariables(NVTOT, L[0], L[1], sqrt(a0[0]), kc);
+  setDeviceVariables(L[0], L[1], sqrt(a0[0]));
 
   // set time step magnitude
   setdt(dt0);
