@@ -31,7 +31,7 @@ serialTest: serialTest.o
 		g++ -O3 --std=c++11 -I src main/test/dpmNVEtest.cpp src/dpm.cpp -o serialTest.o
 
 cudaTest: cudaTest.o
-		nvcc -w $(NVCCFLAGS) -std=c++11 -I src main/test/cudaNVE.cu src/cuda_dpm.cu $(LFLAGS) -o cudaTest.o
+		nvcc $(NVCCFLAGS) -std=c++11 -I src main/test/cudaNVE.cu src/cuda_dpm.cu $(LFLAGS) -o cudaTest.o
 
 clean:
 	rm -f *.o $(BINARIES)
