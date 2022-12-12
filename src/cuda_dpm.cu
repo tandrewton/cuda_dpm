@@ -2465,6 +2465,7 @@ void dpm::setBlockGridDims(int dimBlock) {
 }
 
 void dpm::setDeviceVariables(int numVerts, double boxlengthX, double boxlengthY, double density, double spring_constant) {
+  cudaSetDevice(0);
   // set device variables needed for force kernel
   cudaError_t cudaStatus;
 
