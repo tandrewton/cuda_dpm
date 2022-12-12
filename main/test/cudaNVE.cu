@@ -2,6 +2,8 @@
 //
 // Compilation command:
 // nvcc -w -O3 -std=c++11 -I src main/test/cudaNVE.cu src/cuda_dpm.cu -o cudaTest.o
+// run command:
+// ./cudaTest.o
 
 // header files
 #include <cuda.h>

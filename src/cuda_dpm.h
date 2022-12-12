@@ -189,7 +189,6 @@ class dpm {
   // cuda setters
   void setDeviceVariables();
   void setBlockGridDims(int dimBlock);
-  void setDeviceVariables();
   void cudaVertexNVE(ofstream& enout, double T, double dt0, int NT, int NPRINTSKIP);
 
   // File openers
