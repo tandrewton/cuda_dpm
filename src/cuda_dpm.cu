@@ -2467,14 +2467,14 @@ void dpm::setBlockGridDims(int dimBlock) {
 void dpm::setDeviceVariables() {
   // set device variables needed for force kernel
   double rho0 = sqrt(a0.at(0));
-  cout << "NVTOT = " << NVTOT << ", kc = " << kc << '\n';
-  cout << "before setting device variables: d_numVertices = " << d_numVertices << ", d_kc = " << d_kc << ", rho0 = " << rho0 << '\n';
+  cout << "NVTOT = " << NVTOT << ", kc = " << kc << ", rho0 = " << rho0 << '\n';
+  cout << "before setting device variables: d_numVertices = " << d_numVertices << ", d_kc = " << d_kc << ", d_rho0 = " << rho0 << '\n';
   cudaError_t cudaStatus = cudaMemcpyToSymbol(d_numVertices, &NVTOT, sizeof(NVTOT));
   cudaMemcpyToSymbol(d_L, &L[0], 2 * sizeof(double));
   cudaMemcpyToSymbol(d_rho0, &rho0, sizeof(rho0));
   cudaMemcpyToSymbol(d_kc, &kc, sizeof(kc));
   cout << "NVTOT = " << NVTOT << ", kc = " << kc << '\n';
-  cout << "after setting device variables: d_numVertices = " << d_numVertices << ", d_kc = " << d_kc << ", rho0 = " << rho0 << '\n';
+  cout << "after setting device variables: d_numVertices = " << d_numVertices << ", d_kc = " << d_kc << ", d_rho0 = " << rho0 << '\n';
   if (cudaStatus != cudaSuccess) {
     cout << "error: failed to read in NVTOT\n";
   }
