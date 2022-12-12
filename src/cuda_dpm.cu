@@ -2468,16 +2468,16 @@ void dpm::setDeviceVariables(int numVerts, double boxlengthX, double boxlengthY,
   // set device variables needed for force kernel
   cudaError_t cudaStatus;
 
-  int NVTOT = numVerts;
-  double L[2];
-  L[0] = boxlengthX;
-  L[1] = boxlengthY;
-  double rho0 = density;
-  double kc = spring_constant;
+  int temp_NVTOT = numVerts;
+  double temp_L[2];
+  temp_L[0] = boxlengthX;
+  temp_L[1] = boxlengthY;
+  double temp_rho0 = density;
+  double temp_kc = spring_constant;
 
   cout << "NVTOT = " << NVTOT << ", L[0] = " << L[0] << ", kc = " << kc << ", rho0 = " << rho0 << '\n';
   cout << "before setting device variables: d_numVertices = " << d_numVertices << ", d_L[0] = " << d_L[0] << ", d_kc = " << d_kc << ", d_rho0 = " << d_rho0 << '\n';
-  cudaStatus = cudaMemcpyToSymbol(d_numVertices, &NVTOT, sizeof(int));
+  cudaStatus = cudaMemcpyToSymbol(d_numVertices, &temp_NVTOT, sizeof(int));
   // cudaError_t cudaStatus = cudaMemcpyToSymbol(d_numVertices, &numVerts, sizeof(numVerts));
   if (cudaStatus != cudaSuccess) {
     cout << "error: failed to read in NVTOT\n";
@@ -2486,19 +2486,19 @@ void dpm::setDeviceVariables(int numVerts, double boxlengthX, double boxlengthY,
 
   printf("number of bytes to copy: %d %d %d %d \n", sizeof(NVTOT), 2 * sizeof(double), sizeof(rho0), sizeof(kc));
 
-  cudaStatus = cudaMemcpyToSymbol(d_L, &L[0], 2 * sizeof(double));
+  cudaStatus = cudaMemcpyToSymbol(d_L, &temp_L[0], 2 * sizeof(double));
   if (cudaStatus != cudaSuccess) {
     cout << "error: failed to read in L\n";
     cout << cudaGetErrorString(cudaStatus) << '\n';
   }
 
-  cudaStatus = cudaMemcpyToSymbol(d_rho0, &rho0, sizeof(double));
+  cudaStatus = cudaMemcpyToSymbol(d_rho0, &temp_rho0, sizeof(double));
   if (cudaStatus != cudaSuccess) {
     cout << "error: failed to read in rho0\n";
     cout << cudaGetErrorString(cudaStatus) << '\n';
   }
 
-  cudaStatus = cudaMemcpyToSymbol(d_kc, &kc, sizeof(double));
+  cudaStatus = cudaMemcpyToSymbol(d_kc, &temp_kc, sizeof(double));
   if (cudaStatus != cudaSuccess) {
     cout << "error: failed to read in kc\n";
     cout << cudaGetErrorString(cudaStatus) << '\n';
