@@ -30,6 +30,8 @@
 
 using namespace std;
 
+__constant__ int NDIM = 2;
+
 // cuda kernels
 __global__ void kernelVertexForces(double* radius, double* pos, double* force, double energy, int d_numVertices) {
   /*what does this function need passed into it?
