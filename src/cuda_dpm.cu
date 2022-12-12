@@ -2467,7 +2467,7 @@ void dpm::cudaVertexNVE(ofstream& enout, double T, double dt0, int NT, int NPRIN
     cudaEventElapsedTime(&elapsed_time_ms, start, stop);
 
     printf("Back from kernel\n");
-    cudaMemcpy(F, dev_F, sizeF, cudaMemcpyDeviceToHost);
+    cudaMemcpy(&F[0], dev_F, sizeF, cudaMemcpyDeviceToHost);
 
     printf("Time to calculate results on GPU: %f ms.\n", elapsed_time_ms);  // exec. time
 
