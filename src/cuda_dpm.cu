@@ -2468,7 +2468,7 @@ void dpm::setDeviceVariables(int numVerts, double boxlengthX, double boxlengthY,
   // set device variables needed for force kernel
   NVTOT = numVerts;
   L[0] = boxlengthX;
-  L[1] = boxLengthY;
+  L[1] = boxlengthY;
   double rho0 = density;
   kc = spring_constant;
   cout << "NVTOT = " << NVTOT << ", L[0] = " << L[0] << ", kc = " << kc << ", rho0 = " << rho0 << '\n';
