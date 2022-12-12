@@ -13,6 +13,34 @@
 // namespace
 using namespace std;
 
+// cuda kernels
+__global__ void kernelVertexForces(double* radius, double* pos, double* force, double energy, int d_numVertices) {
+  /*what does this function need passed into it?
+  serial algorithm:
+  sort neighbor list
+  loop over a reference vertex in the neighbor list
+  access neighbor of reference vertex in the neighbor list
+  perform distance calculation
+  calculate force, energy
+  add to force vector
+  add to stresses
+
+  parallel algorithm:
+  get vertexID
+  loop over neighbor list IDs?
+  check for neighbors
+  call function for two-particle force function
+  */
+  // why not : threadIdx.x + blockDim.x * blockIdx.x ?
+  int vertexID = blockIdx.x + blockDim.x * threadIdx.x;
+  printf("vertexID = %d", vertexID);
+  if (vertexID < d_numVertices) {
+    printf("vertexId %d > d_numVertices %d", vertexID, d_numVertices);
+    force[vertexID * NDIM] = 1.0;
+    force[vertexID * NDIM + 1] = 2.0;
+  }
+}
+
 /******************************
 
         C O N S T R U C T O R S  &

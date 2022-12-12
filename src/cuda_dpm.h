@@ -1,21 +1,6 @@
 #ifndef CUDA_DPM_H
 #define CUDA_DPM_H
 
-/*
-
-        HEADER FILE FOR DPM CLASS
-
-                -- Stores vertex information for NCELLS with n_\mu vertices each
-                -- Stores shape parameters + spring constants
-                -- Integrates equations of motion (NVE/NVT)
-                -- Finds specified configurations (jammed, fixed p, fixed shear strain, etc)
-                -- Compute mechanical information (Hessian, elastic moduli, etc)
-                -- Prints data to files
-
-        Jack Treado, 04/10/21
-
-*/
-
 #include <cmath>
 #include <cstdlib>
 #include <fstream>
@@ -31,34 +16,6 @@
 using namespace std;
 
 __constant__ int NDIM = 2;
-
-// cuda kernels
-__global__ void kernelVertexForces(double* radius, double* pos, double* force, double energy, int d_numVertices) {
-  /*what does this function need passed into it?
-  serial algorithm:
-  sort neighbor list
-  loop over a reference vertex in the neighbor list
-  access neighbor of reference vertex in the neighbor list
-  perform distance calculation
-  calculate force, energy
-  add to force vector
-  add to stresses
-
-  parallel algorithm:
-  get vertexID
-  loop over neighbor list IDs?
-  check for neighbors
-  call function for two-particle force function
-  */
-  // why not : threadIdx.x + blockDim.x * blockIdx.x ?
-  int vertexID = blockIdx.x + blockDim.x * threadIdx.x;
-  printf("vertexID = %d", vertexID);
-  if (vertexID < d_numVertices) {
-    printf("vertexId %d > d_numVertices %d", vertexID, d_numVertices);
-    force[vertexID * NDIM] = 1.0;
-    force[vertexID * NDIM + 1] = 2.0;
-  }
-}
 
 class dpm;
 typedef void (dpm::*dpmMemFn)(void);
