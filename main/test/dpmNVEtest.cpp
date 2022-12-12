@@ -1,8 +1,7 @@
 // File to test dpm forces using NVE protocol
 //
 // Compilation command:
-// g++ -O3 --std=c++11 -I src main/test/dpmNVEtest.cpp src/*.cpp -o test.o
-// g++ -O3 --std=c++11 -I src main/test/dpmNVEtest.cpp src/dpm.cpp -o test.o
+// g++ -O3 --std=c++11 -I src main/test/dpmNVEtest.cpp src/dpm.cpp -o serialTest.o
 
 // header files
 #include "dpm.h"

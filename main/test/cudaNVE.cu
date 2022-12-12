@@ -1,9 +1,7 @@
 // File to test dpm forces using NVE protocol
 //
 // Compilation command:
-// g++ -O3 --std=c++11 -I src main/test/dpmNVEtest.cpp src/*.cpp -o test.o
-//
-// nvcc -w -O3 -std=c++11 -I src main/test/cudaNVE.cu src/cuda_dpm.cu -o test.o
+// nvcc -w -O3 -std=c++11 -I src main/test/cudaNVE.cu src/cuda_dpm.cu -o cudaTest.o
 
 // header files
 #include <cuda.h>
