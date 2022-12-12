@@ -33,9 +33,9 @@ __global__ void kernelVertexForces(double* radius, double* pos, double* force, d
   */
   // why not : threadIdx.x + blockDim.x * blockIdx.x ?
   int vertexID = threadIdx.x + blockDim.x * blockIdx.x;
-  printf("vertexID = %d\n", vertexID);
+  // printf("vertexID = %d\n", vertexID);
   if (vertexID < d_numVertices) {
-    printf("vertexId %d > d_numVertices %d\n", vertexID, d_numVertices);
+    // printf("vertexId %d > d_numVertices %d\n", vertexID, d_numVertices);
     force[vertexID * NDIM] = 1.0;
     force[vertexID * NDIM + 1] = 2.0;
   }
@@ -2481,12 +2481,12 @@ void dpm::cudaVertexNVE(ofstream& enout, double T, double dt0, int NT, int NPRIN
     cudaMemcpy(dev_x, &x[0], sizeX, cudaMemcpyHostToDevice);
     cudaMemcpy(dev_F, &F[0], sizeF, cudaMemcpyHostToDevice);
 
+    printf("Launching kernel\n");
+
     cudaEventCreate(&start);  // instrument code to measure start time
     cudaEventCreate(&stop);
-
     cudaEventRecord(start, 0);
 
-    printf("Launching kernel\n");
     // FORCE UPDATE
     kernelVertexForces<<<dimGrid, dimBlock>>>(dev_r, dev_x, dev_F, energy, NVTOT);
 

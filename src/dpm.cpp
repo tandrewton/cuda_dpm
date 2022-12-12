@@ -2418,6 +2418,8 @@ void dpm::vertexNVE2D(ofstream& enout, dpmMemFn forceCall, double T, double dt0,
         x[i] += L[i % NDIM];
     }
 
+    cout << "before force calculation!\n";
+
     auto t1 = high_resolution_clock::now();
 
     // FORCE UPDATE
@@ -2427,6 +2429,8 @@ void dpm::vertexNVE2D(ofstream& enout, dpmMemFn forceCall, double T, double dt0,
     auto t2 = high_resolution_clock::now();
 
     duration<double, std::milli> ms_double = t2 - t1;
+
+    cout << "back from force calculation!\n";
     std::cout << "Time to calculate results on CPU = " << ms_double.count() << " ms\n";
 
     // VV VELOCITY UPDATE #2
