@@ -36,10 +36,11 @@ __global__ void kernelVertexForces(double* radius, double* pos, double* force, d
   cudaMemCpyToSymbol all of the relevant values like rho0, L[0], L[1], kc
   */
   int vertexID = threadIdx.x + blockDim.x * blockIdx.x;
-  int gi = vertexID;
+  int gi = vertexID, ci, cj;
   int NDIM = 2;
   double sij, dx, dy, rij, fx, fy, ftmp;
   energy[NDIM * vertexID] = 0.0;
+  ci = gi / d_numVertsPerCell;
 
   // memCpyToSymbol rho0, L[0], L[1], kc in set
 
@@ -54,7 +55,8 @@ __global__ void kernelVertexForces(double* radius, double* pos, double* force, d
     // force[vertexID * NDIM + 1] = 2.0;
 
     for (int gj = 0; gj < d_numVertices; gj++) {
-      if (gi == gj)
+      cj = gj / d_numVertsPerCell;
+      if (gi == gj || ci == cj)
         continue;
       // contact distance
       sij = thisRad + radius[gj];
@@ -2485,6 +2487,12 @@ void dpm::setDeviceVariables(double boxlengthX, double boxlengthY, double densit
   // printf("before setting device variables: d_numVertices = %d, d_L[0] = %f, d_kc = %f, d_rho0 = %f\n", d_numVertices, d_L[0], d_kc, d_rho0);
 
   printf("number of bytes to copy: %d %d %d %d \n", sizeof(int32_t), 2 * sizeof(double), sizeof(temp_rho0), sizeof(temp_kc));
+
+  cudaStatus = cudaMemcpyToSymbol(d_numVertsPerCell, &nv[0], sizeof(int));
+  if (cudaStatus != cudaSuccess) {
+    cout << "error: failed to read in nv[0]\n";
+    cout << cudaGetErrorString(cudaStatus) << '\n';
+  }
 
   cudaStatus = cudaMemcpyToSymbol(d_numVertices, &temp_NVTOT, sizeof(int));
   if (cudaStatus != cudaSuccess) {

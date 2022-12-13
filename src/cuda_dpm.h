@@ -20,6 +20,7 @@ __device__ __constant__ int d_numVertices;
 __device__ __constant__ double d_rho0;
 __device__ __constant__ double d_L[2];
 __device__ __constant__ double d_kc;
+__device__ __constant__ int d_numVertsPerCell;
 
 class dpm;
 typedef void (dpm::*dpmMemFn)(void);
