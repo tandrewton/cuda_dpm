@@ -93,7 +93,7 @@ gi 8 - gj 41 at pos 2.914960 	 2.704624, 2.800150 	 2.747771, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856867 	 2.995603, 2.914042 	 0.181403, sij 0.279741, force 0.222900 0.805370
 , ftmp 0.835646, dx 0.057175, rij 0.214347, dU 0.027323
 back from force calculation!
-Time to calculate results on CPU = 0.346084 ms
+Time to calculate results on CPU = 0.390697 ms
 
 
 ===============================
@@ -162,7 +162,7 @@ gi 8 - gj 41 at pos 2.915001 	 2.704621, 2.800140 	 2.747743, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856873 	 2.995582, 2.914036 	 0.181399, sij 0.279741, force 0.222799 0.805239
 , ftmp 0.835494, dx 0.057163, rij 0.214359, dU 0.027313
 back from force calculation!
-Time to calculate results on CPU = 0.282918 ms
+Time to calculate results on CPU = 0.28589 ms
 
 
 ===============================
@@ -231,7 +231,7 @@ gi 8 - gj 41 at pos 2.915056 	 2.704611, 2.800115 	 2.747713, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856879 	 2.995580, 2.914045 	 0.181395, sij 0.279741, force 0.222812 0.805236
 , ftmp 0.835494, dx 0.057166, rij 0.214359, dU 0.027313
 back from force calculation!
-Time to calculate results on CPU = 0.275344 ms
+Time to calculate results on CPU = 0.275167 ms
 
 
 ===============================
@@ -300,7 +300,7 @@ gi 8 - gj 41 at pos 2.915124 	 2.704596, 2.800074 	 2.747682, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856886 	 2.995596, 2.914070 	 0.181393, sij 0.279741, force 0.222937 0.805360
 , ftmp 0.835647, dx 0.057184, rij 0.214347, dU 0.027323
 back from force calculation!
-Time to calculate results on CPU = 0.268227 ms
+Time to calculate results on CPU = 0.271765 ms
 
 
 ===============================
@@ -369,7 +369,7 @@ gi 8 - gj 41 at pos 2.915206 	 2.704575, 2.800018 	 2.747650, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856892 	 2.995629, 2.914110 	 0.181392, sij 0.279741, force 0.223176 0.805611
 , ftmp 0.835952, dx 0.057218, rij 0.214323, dU 0.027343
 back from force calculation!
-Time to calculate results on CPU = 0.273197 ms
+Time to calculate results on CPU = 0.292321 ms
 
 
 ===============================
@@ -438,7 +438,7 @@ gi 8 - gj 41 at pos 2.915301 	 2.704548, 2.799946 	 2.747617, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856899 	 2.995680, 2.914166 	 0.181393, sij 0.279741, force 0.223527 0.805989
 , ftmp 0.836410, dx 0.057267, rij 0.214288, dU 0.027373
 back from force calculation!
-Time to calculate results on CPU = 0.270211 ms
+Time to calculate results on CPU = 0.30003 ms
 
 
 ===============================
@@ -507,7 +507,7 @@ gi 8 - gj 41 at pos 2.915410 	 2.704515, 2.799860 	 2.747582, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856905 	 2.995749, 2.914237 	 0.181394, sij 0.279741, force 0.223992 0.806493
 , ftmp 0.837020, dx 0.057332, rij 0.214240, dU 0.027413
 back from force calculation!
-Time to calculate results on CPU = 0.276828 ms
+Time to calculate results on CPU = 0.279144 ms
 
 
 ===============================
@@ -576,7 +576,7 @@ gi 8 - gj 41 at pos 2.915533 	 2.704476, 2.799758 	 2.747545, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856912 	 2.995835, 2.914324 	 0.181396, sij 0.279741, force 0.224571 0.807122
 , ftmp 0.837782, dx 0.057412, rij 0.214180, dU 0.027463
 back from force calculation!
-Time to calculate results on CPU = 0.273093 ms
+Time to calculate results on CPU = 0.277557 ms
 
 
 ===============================
@@ -645,7 +645,7 @@ gi 8 - gj 41 at pos 2.915669 	 2.704432, 2.799640 	 2.747508, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856918 	 2.995939, 2.914425 	 0.181400, sij 0.279741, force 0.225263 0.807876
 , ftmp 0.838694, dx 0.057507, rij 0.214109, dU 0.027523
 back from force calculation!
-Time to calculate results on CPU = 0.396633 ms
+Time to calculate results on CPU = 0.294391 ms
 
 
 ===============================
@@ -714,7 +714,7 @@ gi 8 - gj 41 at pos 2.915818 	 2.704382, 2.799508 	 2.747468, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856925 	 2.996061, 2.914542 	 0.181405, sij 0.279741, force 0.226070 0.808754
 , ftmp 0.839756, dx 0.057618, rij 0.214026, dU 0.027592
 back from force calculation!
-Time to calculate results on CPU = 0.278333 ms
+Time to calculate results on CPU = 0.281168 ms
 
 
 ===============================
@@ -783,7 +783,7 @@ gi 8 - gj 41 at pos 2.915980 	 2.704326, 2.799360 	 2.747428, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856931 	 2.996200, 2.914675 	 0.181410, sij 0.279741, force 0.226990 0.809753
 , ftmp 0.840966, dx 0.057743, rij 0.213931, dU 0.027672
 back from force calculation!
-Time to calculate results on CPU = 0.273674 ms
+Time to calculate results on CPU = 0.28166 ms
 
 
 ===============================
@@ -852,7 +852,7 @@ gi 8 - gj 41 at pos 2.916156 	 2.704265, 2.799197 	 2.747386, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856938 	 2.996357, 2.914822 	 0.181417, sij 0.279741, force 0.228026 0.810873
 , ftmp 0.842325, dx 0.057885, rij 0.213825, dU 0.027761
 back from force calculation!
-Time to calculate results on CPU = 0.272964 ms
+Time to calculate results on CPU = 0.315217 ms
 
 
 ===============================
@@ -921,7 +921,7 @@ gi 8 - gj 41 at pos 2.916346 	 2.704198, 2.799019 	 2.747342, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856944 	 2.996532, 2.914985 	 0.181425, sij 0.279741, force 0.229177 0.812111
 , ftmp 0.843829, dx 0.058041, rij 0.213707, dU 0.027861
 back from force calculation!
-Time to calculate results on CPU = 0.276124 ms
+Time to calculate results on CPU = 1.878693 ms
 
 
 ===============================
@@ -990,7 +990,7 @@ gi 8 - gj 41 at pos 2.916548 	 2.704125, 2.798826 	 2.747297, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856951 	 2.996723, 2.915163 	 0.181434, sij 0.279741, force 0.230443 0.813467
 , ftmp 0.845477, dx 0.058213, rij 0.213578, dU 0.027970
 back from force calculation!
-Time to calculate results on CPU = 0.283531 ms
+Time to calculate results on CPU = 0.282254 ms
 
 
 ===============================
@@ -1059,7 +1059,7 @@ gi 8 - gj 41 at pos 2.916764 	 2.704046, 2.798618 	 2.747251, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856957 	 2.996932, 2.915357 	 0.181444, sij 0.279741, force 0.231825 0.814937
 , ftmp 0.847269, dx 0.058400, rij 0.213438, dU 0.028088
 back from force calculation!
-Time to calculate results on CPU = 0.276171 ms
+Time to calculate results on CPU = 0.293556 ms
 
 
 ===============================
@@ -1128,7 +1128,7 @@ gi 8 - gj 41 at pos 2.916993 	 2.703962, 2.798394 	 2.747203, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856963 	 2.997158, 2.915565 	 0.181455, sij 0.279741, force 0.233324 0.816519
 , ftmp 0.849202, dx 0.058602, rij 0.213287, dU 0.028217
 back from force calculation!
-Time to calculate results on CPU = 0.269748 ms
+Time to calculate results on CPU = 0.280143 ms
 
 
 ===============================
@@ -1197,7 +1197,7 @@ gi 8 - gj 41 at pos 2.917235 	 2.703873, 2.798156 	 2.747154, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856969 	 2.997401, 2.915788 	 0.181467, sij 0.279741, force 0.234939 0.818211
 , ftmp 0.851273, dx 0.058819, rij 0.213124, dU 0.028354
 back from force calculation!
-Time to calculate results on CPU = 0.300994 ms
+Time to calculate results on CPU = 0.275285 ms
 
 
 ===============================
@@ -1266,7 +1266,7 @@ gi 8 - gj 41 at pos 2.917490 	 2.703777, 2.797903 	 2.747104, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856975 	 2.997661, 2.916027 	 0.181481, sij 0.279741, force 0.236673 0.820011
 , ftmp 0.853482, dx 0.059052, rij 0.212952, dU 0.028502
 back from force calculation!
-Time to calculate results on CPU = 0.286197 ms
+Time to calculate results on CPU = 0.27161 ms
 
 
 ===============================
@@ -1335,7 +1335,7 @@ gi 8 - gj 41 at pos 2.917758 	 2.703677, 2.797635 	 2.747052, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856980 	 2.997938, 2.916280 	 0.181495, sij 0.279741, force 0.238524 0.821914
 , ftmp 0.855825, dx 0.059300, rij 0.212768, dU 0.028658
 back from force calculation!
-Time to calculate results on CPU = 0.275631 ms
+Time to calculate results on CPU = 9.106172 ms
 
 
 ===============================
@@ -1404,7 +1404,7 @@ gi 8 - gj 41 at pos 2.918038 	 2.703571, 2.797352 	 2.746998, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856985 	 2.998232, 2.916548 	 0.181510, sij 0.279741, force 0.240495 0.823919
 , ftmp 0.858301, dx 0.059563, rij 0.212575, dU 0.028824
 back from force calculation!
-Time to calculate results on CPU = 0.268688 ms
+Time to calculate results on CPU = 0.277948 ms
 
 
 ===============================
@@ -1473,7 +1473,7 @@ gi 8 - gj 41 at pos 2.918332 	 2.703459, 2.797055 	 2.746943, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856990 	 2.998542, 2.916831 	 0.181527, sij 0.279741, force 0.242585 0.826021
 , ftmp 0.860906, dx 0.059841, rij 0.212371, dU 0.029000
 back from force calculation!
-Time to calculate results on CPU = 0.269905 ms
+Time to calculate results on CPU = 0.277811 ms
 
 
 ===============================
@@ -1542,7 +1542,7 @@ gi 8 - gj 41 at pos 2.918638 	 2.703342, 2.796743 	 2.746887, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856994 	 2.998869, 2.917129 	 0.181544, sij 0.279741, force 0.244794 0.828218
 , ftmp 0.863638, dx 0.060135, rij 0.212157, dU 0.029184
 back from force calculation!
-Time to calculate results on CPU = 0.269618 ms
+Time to calculate results on CPU = 0.27522 ms
 
 
 ===============================
@@ -1611,7 +1611,7 @@ gi 8 - gj 41 at pos 2.918957 	 2.703220, 2.796416 	 2.746829, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856998 	 2.999212, 2.917441 	 0.181563, sij 0.279741, force 0.247125 0.830506
 , ftmp 0.866493, dx 0.060444, rij 0.211933, dU 0.029377
 back from force calculation!
-Time to calculate results on CPU = 0.264994 ms
+Time to calculate results on CPU = 0.270201 ms
 
 
 ===============================
@@ -1680,7 +1680,7 @@ gi 8 - gj 41 at pos 2.919288 	 2.703092, 2.796075 	 2.746770, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.857001 	 2.999572, 2.917768 	 0.181582, sij 0.279741, force 0.249577 0.832880
 , ftmp 0.869470, dx 0.060768, rij 0.211700, dU 0.029580
 back from force calculation!
-Time to calculate results on CPU = 0.267384 ms
+Time to calculate results on CPU = 0.277043 ms
 
 
 ===============================
@@ -1749,7 +1749,7 @@ gi 8 - gj 41 at pos 2.919632 	 2.702959, 2.795719 	 2.746709, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.857003 	 2.999947, 2.918110 	 0.181603, sij 0.279741, force 0.252151 0.835337
 , ftmp 0.872564, dx 0.061107, rij 0.211458, dU 0.029790
 back from force calculation!
-Time to calculate results on CPU = 0.265894 ms
+Time to calculate results on CPU = 0.274174 ms
 
 
 ===============================
@@ -1818,7 +1818,7 @@ gi 8 - gj 41 at pos 2.919989 	 2.702821, 2.795349 	 2.746647, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.857005 	 3.000338, 2.918466 	 0.181624, sij 0.279741, force 0.254848 0.837873
 , ftmp 0.875773, dx 0.061461, rij 0.211207, dU 0.030010
 back from force calculation!
-Time to calculate results on CPU = 0.261113 ms
+Time to calculate results on CPU = 0.270288 ms
 
 
 ===============================
@@ -1887,7 +1887,7 @@ gi 8 - gj 41 at pos 2.920357 	 2.702677, 2.794965 	 2.746584, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.857006 	 3.000745, 2.918836 	 0.181647, sij 0.279741, force 0.257668 0.840483
 , ftmp 0.879093, dx 0.061830, rij 0.210947, dU 0.030238
 back from force calculation!
-Time to calculate results on CPU = 0.283938 ms
+Time to calculate results on CPU = 0.29217 ms
 
 
 ===============================
@@ -1956,7 +1956,7 @@ gi 8 - gj 41 at pos 2.920738 	 2.702529, 2.794567 	 2.746519, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.857007 	 3.001168, 2.919221 	 0.181670, sij 0.279741, force 0.260612 0.843163
 , ftmp 0.882520, dx 0.062214, rij 0.210679, dU 0.030474
 back from force calculation!
-Time to calculate results on CPU = 0.268711 ms
+Time to calculate results on CPU = 0.277591 ms
 
 
 ===============================
@@ -2025,7 +2025,7 @@ gi 8 - gj 41 at pos 2.921131 	 2.702375, 2.794154 	 2.746453, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.857006 	 3.001606, 2.919620 	 0.181695, sij 0.279741, force 0.263680 0.845907
 , ftmp 0.886051, dx 0.062614, rij 0.210403, dU 0.030718
 back from force calculation!
-Time to calculate results on CPU = 0.263105 ms
+Time to calculate results on CPU = 0.269427 ms
 
 
 ===============================
@@ -2094,7 +2094,7 @@ gi 8 - gj 41 at pos 2.921536 	 2.702216, 2.793728 	 2.746385, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.857004 	 3.002059, 2.920033 	 0.181720, sij 0.279741, force 0.266874 0.848712
 , ftmp 0.889681, dx 0.063028, rij 0.210119, dU 0.030971
 back from force calculation!
-Time to calculate results on CPU = 0.266617 ms
+Time to calculate results on CPU = 0.267187 ms
 
 
 ===============================
@@ -2163,7 +2163,7 @@ gi 8 - gj 41 at pos 2.921952 	 2.702052, 2.793287 	 2.746316, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.857002 	 3.002526, 2.920460 	 0.181747, sij 0.279741, force 0.270193 0.851571
 , ftmp 0.893408, dx 0.063458, rij 0.209827, dU 0.031231
 back from force calculation!
-Time to calculate results on CPU = 0.269948 ms
+Time to calculate results on CPU = 0.269467 ms
 
 
 ===============================
@@ -2232,7 +2232,7 @@ gi 8 - gj 41 at pos 2.922381 	 2.701883, 2.792833 	 2.746246, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856998 	 3.003009, 2.920901 	 0.181774, sij 0.279741, force 0.273639 0.854480
 , ftmp 0.897225, dx 0.063903, rij 0.209528, dU 0.031498
 back from force calculation!
-Time to calculate results on CPU = 0.276017 ms
+Time to calculate results on CPU = 0.272016 ms
 
 
 ===============================
@@ -2301,7 +2301,7 @@ gi 8 - gj 41 at pos 2.922821 	 2.701710, 2.792365 	 2.746174, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856993 	 3.003507, 2.921356 	 0.181803, sij 0.279741, force 0.277211 0.857432
 , ftmp 0.901131, dx 0.064362, rij 0.209223, dU 0.031773
 back from force calculation!
-Time to calculate results on CPU = 0.274684 ms
+Time to calculate results on CPU = 0.271468 ms
 
 
 ===============================
@@ -2370,7 +2370,7 @@ gi 8 - gj 41 at pos 2.923272 	 2.701531, 2.791884 	 2.746101, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856987 	 3.004018, 2.921824 	 0.181832, sij 0.279741, force 0.280911 0.860424
 , ftmp 0.905119, dx 0.064837, rij 0.208911, dU 0.032055
 back from force calculation!
-Time to calculate results on CPU = 0.270301 ms
+Time to calculate results on CPU = 0.267747 ms
 
 
 ===============================
@@ -2439,7 +2439,7 @@ gi 8 - gj 41 at pos 2.923735 	 2.701347, 2.791389 	 2.746026, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856980 	 3.004544, 2.922307 	 0.181862, sij 0.279741, force 0.284737 0.863448
 , ftmp 0.909185, dx 0.065327, rij 0.208593, dU 0.032343
 back from force calculation!
-Time to calculate results on CPU = 0.263005 ms
+Time to calculate results on CPU = 0.27164 ms
 
 
 ===============================
@@ -2508,7 +2508,7 @@ gi 8 - gj 41 at pos 2.924209 	 2.701159, 2.790881 	 2.745950, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856971 	 3.005084, 2.922802 	 0.181894, sij 0.279741, force 0.288692 0.866499
 , ftmp 0.913326, dx 0.065831, rij 0.208269, dU 0.032639
 back from force calculation!
-Time to calculate results on CPU = 0.264501 ms
+Time to calculate results on CPU = 0.27281 ms
 
 
 ===============================
@@ -2577,7 +2577,7 @@ gi 8 - gj 41 at pos 2.924695 	 2.700966, 2.790359 	 2.745873, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856960 	 3.005637, 2.923311 	 0.181926, sij 0.279741, force 0.292774 0.869571
 , ftmp 0.917535, dx 0.066351, rij 0.207939, dU 0.032940
 back from force calculation!
-Time to calculate results on CPU = 0.264368 ms
+Time to calculate results on CPU = 0.279603 ms
 
 
 ===============================
@@ -2646,7 +2646,7 @@ gi 8 - gj 41 at pos 2.925191 	 2.700768, 2.789824 	 2.745794, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856948 	 3.006204, 2.923834 	 0.181959, sij 0.279741, force 0.296985 0.872657
 , ftmp 0.921809, dx 0.066885, rij 0.207605, dU 0.033248
 back from force calculation!
-Time to calculate results on CPU = 0.269168 ms
+Time to calculate results on CPU = 0.276214 ms
 
 
 ===============================
@@ -2715,7 +2715,7 @@ gi 8 - gj 41 at pos 2.925698 	 2.700566, 2.789277 	 2.745714, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856935 	 3.006785, 2.924369 	 0.181993, sij 0.279741, force 0.301324 0.875752
 , ftmp 0.926141, dx 0.067435, rij 0.207266, dU 0.033561
 back from force calculation!
-Time to calculate results on CPU = 0.261011 ms
+Time to calculate results on CPU = 0.268017 ms
 
 
 ===============================
@@ -2784,7 +2784,7 @@ gi 8 - gj 41 at pos 2.926216 	 2.700359, 2.788716 	 2.745633, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856919 	 3.007378, 2.924918 	 0.182027, sij 0.279741, force 0.305791 0.878848
 , ftmp 0.930528, dx 0.067999, rij 0.206922, dU 0.033880
 back from force calculation!
-Time to calculate results on CPU = 0.261124 ms
+Time to calculate results on CPU = 0.271274 ms
 
 
 ===============================
@@ -2853,7 +2853,7 @@ gi 8 - gj 41 at pos 2.926744 	 2.700147, 2.788143 	 2.745551, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856901 	 3.007984, 2.925480 	 0.182063, sij 0.279741, force 0.310386 0.881940
 , ftmp 0.934964, dx 0.068578, rij 0.206575, dU 0.034204
 back from force calculation!
-Time to calculate results on CPU = 0.267873 ms
+Time to calculate results on CPU = 0.273168 ms
 
 
 ===============================
@@ -2922,7 +2922,7 @@ gi 8 - gj 41 at pos 2.927283 	 2.699931, 2.787557 	 2.745467, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856882 	 3.008602, 2.926054 	 0.182099, sij 0.279741, force 0.315110 0.885020
 , ftmp 0.939443, dx 0.069172, rij 0.206225, dU 0.034532
 back from force calculation!
-Time to calculate results on CPU = 0.265481 ms
+Time to calculate results on CPU = 0.270874 ms
 
 
 ===============================
@@ -2991,7 +2991,7 @@ gi 8 - gj 41 at pos 2.927832 	 2.699711, 2.786958 	 2.745382, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856860 	 3.009233, 2.926641 	 0.182137, sij 0.279741, force 0.319960 0.888081
 , ftmp 0.943961, dx 0.069781, rij 0.205871, dU 0.034865
 back from force calculation!
-Time to calculate results on CPU = 0.266787 ms
+Time to calculate results on CPU = 0.283313 ms
 
 
 ===============================
@@ -3060,7 +3060,7 @@ gi 8 - gj 41 at pos 2.928392 	 2.699486, 2.786347 	 2.745296, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856836 	 3.009876, 2.927241 	 0.182175, sij 0.279741, force 0.324938 0.891116
 , ftmp 0.948511, dx 0.070405, rij 0.205515, dU 0.035202
 back from force calculation!
-Time to calculate results on CPU = 0.265668 ms
+Time to calculate results on CPU = 0.276274 ms
 
 
 ===============================
@@ -3129,7 +3129,7 @@ gi 8 - gj 41 at pos 2.928961 	 2.699257, 2.785724 	 2.745209, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856809 	 3.010531, 2.927853 	 0.182213, sij 0.279741, force 0.330042 0.894119
 , ftmp 0.953088, dx 0.071043, rij 0.205157, dU 0.035542
 back from force calculation!
-Time to calculate results on CPU = 0.263281 ms
+Time to calculate results on CPU = 0.276905 ms
 
 
 ===============================
@@ -3198,7 +3198,7 @@ gi 8 - gj 41 at pos 2.929540 	 2.699023, 2.785089 	 2.745120, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856781 	 3.011197, 2.928477 	 0.182253, sij 0.279741, force 0.335271 0.897082
 , ftmp 0.957687, dx 0.071696, rij 0.204797, dU 0.035886
 back from force calculation!
-Time to calculate results on CPU = 0.270694 ms
+Time to calculate results on CPU = 0.27371 ms
 
 
 ===============================
@@ -3267,7 +3267,7 @@ gi 8 - gj 41 at pos 2.930129 	 2.698785, 2.784442 	 2.745031, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856749 	 3.011874, 2.929113 	 0.182293, sij 0.279741, force 0.340626 0.899998
 , ftmp 0.962301, dx 0.072364, rij 0.204436, dU 0.036233
 back from force calculation!
-Time to calculate results on CPU = 0.268947 ms
+Time to calculate results on CPU = 0.279384 ms
 
 
 ===============================
@@ -3336,7 +3336,7 @@ gi 8 - gj 41 at pos 2.930727 	 2.698543, 2.783783 	 2.744940, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856715 	 3.012562, 2.929762 	 0.182334, sij 0.279741, force 0.346104 0.902859
 , ftmp 0.966925, dx 0.073047, rij 0.204074, dU 0.036582
 back from force calculation!
-Time to calculate results on CPU = 0.268351 ms
+Time to calculate results on CPU = 0.271083 ms
 
 
 ===============================
@@ -3405,7 +3405,7 @@ gi 8 - gj 41 at pos 2.931334 	 2.698297, 2.783112 	 2.744849, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856678 	 3.013261, 2.930422 	 0.182376, sij 0.279741, force 0.351704 0.905659
 , ftmp 0.971552, dx 0.073744, rij 0.203712, dU 0.036933
 back from force calculation!
-Time to calculate results on CPU = 0.267068 ms
+Time to calculate results on CPU = 0.270601 ms
 
 
 ===============================
@@ -3474,7 +3474,7 @@ gi 8 - gj 41 at pos 2.931951 	 2.698047, 2.782430 	 2.744756, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856638 	 3.013970, 2.931095 	 0.182418, sij 0.279741, force 0.357426 0.908388
 , ftmp 0.976177, dx 0.074456, rij 0.203350, dU 0.037285
 back from force calculation!
-Time to calculate results on CPU = 0.269544 ms
+Time to calculate results on CPU = 0.285821 ms
 
 
 ===============================
@@ -3543,7 +3543,7 @@ gi 8 - gj 41 at pos 2.932577 	 2.697793, 2.781737 	 2.744662, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856595 	 3.014689, 2.931778 	 0.182461, sij 0.279741, force 0.363267 0.911040
 , ftmp 0.980794, dx 0.075183, rij 0.202989, dU 0.037639
 back from force calculation!
-Time to calculate results on CPU = 0.269631 ms
+Time to calculate results on CPU = 0.27604 ms
 
 
 ===============================
@@ -3612,7 +3612,7 @@ gi 8 - gj 41 at pos 2.933211 	 2.697535, 2.781032 	 2.744568, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856549 	 3.015418, 2.932473 	 0.182504, sij 0.279741, force 0.369225 0.913608
 , ftmp 0.985396, dx 0.075924, rij 0.202629, dU 0.037993
 back from force calculation!
-Time to calculate results on CPU = 0.276871 ms
+Time to calculate results on CPU = 0.278791 ms
 
 
 ===============================
@@ -3681,7 +3681,7 @@ gi 8 - gj 41 at pos 2.933854 	 2.697273, 2.780317 	 2.744473, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856500 	 3.016157, 2.933180 	 0.182548, sij 0.279741, force 0.375299 0.916082
 , ftmp 0.989978, dx 0.076680, rij 0.202270, dU 0.038347
 back from force calculation!
-Time to calculate results on CPU = 0.275284 ms
+Time to calculate results on CPU = 0.279541 ms
 
 
 ===============================
@@ -3750,7 +3750,7 @@ gi 8 - gj 41 at pos 2.934506 	 2.697007, 2.779590 	 2.744376, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856447 	 3.016905, 2.933897 	 0.182593, sij 0.279741, force 0.381486 0.918456
 , ftmp 0.994532, dx 0.077451, rij 0.201914, dU 0.038701
 back from force calculation!
-Time to calculate results on CPU = 0.282311 ms
+Time to calculate results on CPU = 0.283783 ms
 
 
 ===============================
@@ -3819,7 +3819,7 @@ gi 8 - gj 41 at pos 2.935165 	 2.696738, 2.778853 	 2.744279, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856390 	 3.017662, 2.934626 	 0.182638, sij 0.279741, force 0.387784 0.920723
 , ftmp 0.999053, dx 0.078236, rij 0.201560, dU 0.039053
 back from force calculation!
-Time to calculate results on CPU = 0.277391 ms
+Time to calculate results on CPU = 0.286787 ms
 
 
 ===============================
@@ -3888,7 +3888,7 @@ gi 8 - gj 41 at pos 2.935833 	 2.696465, 2.778105 	 2.744181, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856330 	 3.018427, 2.935365 	 0.182683, sij 0.279741, force 0.394191 0.922873
 , ftmp 1.003534, dx 0.079036, rij 0.201209, dU 0.039404
 back from force calculation!
-Time to calculate results on CPU = 0.340434 ms
+Time to calculate results on CPU = 0.289716 ms
 
 
 ===============================
@@ -3957,7 +3957,7 @@ gi 8 - gj 41 at pos 2.936509 	 2.696188, 2.777347 	 2.744083, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856266 	 3.019201, 2.936116 	 0.182729, sij 0.279741, force 0.400702 0.924899
 , ftmp 1.007968, dx 0.079850, rij 0.200862, dU 0.039754
 back from force calculation!
-Time to calculate results on CPU = 0.287363 ms
+Time to calculate results on CPU = 0.342394 ms
 
 
 ===============================
@@ -4026,7 +4026,7 @@ gi 8 - gj 41 at pos 2.937193 	 2.695907, 2.776578 	 2.743984, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856198 	 3.019983, 2.936876 	 0.182775, sij 0.279741, force 0.407316 0.926794
 , ftmp 1.012350, dx 0.080678, rij 0.200519, dU 0.040100
 back from force calculation!
-Time to calculate results on CPU = 0.640905 ms
+Time to calculate results on CPU = 0.276504 ms
 
 
 ===============================
@@ -4095,7 +4095,7 @@ gi 8 - gj 41 at pos 2.937884 	 2.695623, 2.775800 	 2.743884, sij 0.279741, forc
 gi 28 - gj 6 at pos 2.856126 	 3.020772, 2.937647 	 0.182821, sij 0.279741, force 0.414028 0.928550
 , ftmp 1.016673, dx 0.081521, rij 0.200181, dU 0.040443
 back from force calculation!
-Time to calculate results on CPU = 0.466891 ms
+Time to calculate results on CPU = 0.270084 ms
 
 
 ===============================
@@ -4164,7 +4164,7 @@ gi 7 - gj 28 at pos 2.857144 	 2.926247, 2.856049 	 0.000789, sij 0.279741, forc
 gi 8 - gj 41 at pos 2.938582 	 2.695336, 2.775011 	 2.743784, sij 0.279741, force -1.337324 0.396102
 , ftmp 1.394752, dx -0.163571, rij 0.170595, dU 0.076116
 back from force calculation!
-Time to calculate results on CPU = 0.268691 ms
+Time to calculate results on CPU = 0.26918 ms
 
 
 ===============================
@@ -4233,7 +4233,7 @@ gi 7 - gj 28 at pos 2.857241 	 2.925417, 2.855968 	 0.001593, sij 0.279741, forc
 gi 8 - gj 41 at pos 2.939287 	 2.695045, 2.774213 	 2.743683, sij 0.279741, force -1.319550 0.388798
 , ftmp 1.375637, dx -0.165074, rij 0.172090, dU 0.074044
 back from force calculation!
-Time to calculate results on CPU = 0.270164 ms
+Time to calculate results on CPU = 0.270894 ms
 
 
 ===============================
@@ -4302,7 +4302,7 @@ gi 7 - gj 28 at pos 2.857342 	 2.924581, 2.855883 	 0.002404, sij 0.279741, forc
 gi 8 - gj 41 at pos 2.940000 	 2.694750, 2.773405 	 2.743582, sij 0.279741, force -1.301545 0.381503
 , ftmp 1.356306, dx -0.166594, rij 0.173603, dU 0.071977
 back from force calculation!
-Time to calculate results on CPU = 0.291124 ms
+Time to calculate results on CPU = 0.287827 ms
 
 
 ===============================
@@ -4371,7 +4371,7 @@ gi 7 - gj 28 at pos 2.857449 	 2.923738, 2.855793 	 0.003221, sij 0.279741, forc
 gi 8 - gj 41 at pos 2.940719 	 2.694453, 2.772588 	 2.743480, sij 0.279741, force -1.283313 0.374220
 , ftmp 1.336762, dx -0.168130, rij 0.175133, dU 0.069918
 back from force calculation!
-Time to calculate results on CPU = 0.276781 ms
+Time to calculate results on CPU = 0.280477 ms
 
 
 ===============================
@@ -4440,7 +4440,7 @@ gi 7 - gj 28 at pos 2.857560 	 2.922889, 2.855698 	 0.004045, sij 0.279741, forc
 gi 8 - gj 41 at pos 2.941444 	 2.694152, 2.771762 	 2.743378, sij 0.279741, force -1.264858 0.366950
 , ftmp 1.317011, dx -0.169682, rij 0.176678, dU 0.067867
 back from force calculation!
-Time to calculate results on CPU = 0.274377 ms
+Time to calculate results on CPU = 0.276131 ms
 
 
 ===============================
@@ -4509,7 +4509,7 @@ gi 7 - gj 28 at pos 2.857676 	 2.922035, 2.855598 	 0.004875, sij 0.279741, forc
 gi 8 - gj 41 at pos 2.942176 	 2.693847, 2.770927 	 2.743276, sij 0.279741, force -1.246185 0.359695
 , ftmp 1.297057, dx -0.171249, rij 0.178240, dU 0.065826
 back from force calculation!
-Time to calculate results on CPU = 0.274554 ms
+Time to calculate results on CPU = 0.27185 ms
 
 
 ===============================
@@ -4578,7 +4578,7 @@ gi 7 - gj 28 at pos 2.857797 	 2.921175, 2.855494 	 0.005710, sij 0.279741, forc
 gi 8 - gj 41 at pos 2.942914 	 2.693540, 2.770083 	 2.743174, sij 0.279741, force -1.227298 0.352457
 , ftmp 1.276905, dx -0.172831, rij 0.179817, dU 0.063797
 back from force calculation!
-Time to calculate results on CPU = 0.274667 ms
+Time to calculate results on CPU = 0.273224 ms
 
 
 ===============================
@@ -4647,7 +4647,7 @@ gi 7 - gj 28 at pos 2.857924 	 2.920311, 2.855383 	 0.006550, sij 0.279741, forc
 gi 8 - gj 41 at pos 2.943658 	 2.693230, 2.769231 	 2.743072, sij 0.279741, force -1.208203 0.345239
 , ftmp 1.256561, dx -0.174427, rij 0.181409, dU 0.061780
 back from force calculation!
-Time to calculate results on CPU = 0.274414 ms
+Time to calculate results on CPU = 0.326598 ms
 
 
 ===============================
@@ -4716,7 +4716,7 @@ gi 7 - gj 28 at pos 2.858056 	 2.919441, 2.855268 	 0.007396, sij 0.279741, forc
 gi 8 - gj 41 at pos 2.944408 	 2.692916, 2.768369 	 2.742970, sij 0.279741, force -1.188903 0.338042
 , ftmp 1.236027, dx -0.176038, rij 0.183016, dU 0.059777
 back from force calculation!
-Time to calculate results on CPU = 0.274314 ms
+Time to calculate results on CPU = 0.27469 ms
 
 
 ===============================
@@ -4785,7 +4785,7 @@ gi 7 - gj 28 at pos 2.858194 	 2.918567, 2.855147 	 0.008246, sij 0.279741, forc
 gi 8 - gj 41 at pos 2.945163 	 2.692600, 2.767500 	 2.742867, sij 0.279741, force -1.169404 0.330868
 , ftmp 1.215311, dx -0.177662, rij 0.184637, dU 0.057790
 back from force calculation!
-Time to calculate results on CPU = 0.273721 ms
+Time to calculate results on CPU = 0.269953 ms
 
 
 ===============================
@@ -4854,7 +4854,7 @@ gi 7 - gj 28 at pos 2.858338 	 2.917689, 2.855020 	 0.009101, sij 0.279741, forc
 gi 8 - gj 41 at pos 2.945923 	 2.692281, 2.766623 	 2.742765, sij 0.279741, force -1.149711 0.323718
 , ftmp 1.194415, dx -0.179300, rij 0.186272, dU 0.055820
 back from force calculation!
-Time to calculate results on CPU = 0.267281 ms
+Time to calculate results on CPU = 0.27303 ms
 
 
 ===============================
@@ -4923,7 +4923,7 @@ gi 7 - gj 28 at pos 2.858487 	 2.916808, 2.854887 	 0.009959, sij 0.279741, forc
 gi 8 - gj 41 at pos 2.946688 	 2.691959, 2.765738 	 2.742664, sij 0.279741, force -1.129828 0.316594
 , ftmp 1.173347, dx -0.180951, rij 0.187921, dU 0.053868
 back from force calculation!
-Time to calculate results on CPU = 0.273198 ms
+Time to calculate results on CPU = 0.271463 ms
 
 
 ===============================
@@ -4992,7 +4992,7 @@ gi 7 - gj 28 at pos 2.858642 	 2.915922, 2.854748 	 0.010822, sij 0.279741, forc
 gi 8 - gj 41 at pos 2.947459 	 2.691634, 2.764845 	 2.742562, sij 0.279741, force -1.109761 0.309497
 , ftmp 1.152110, dx -0.182614, rij 0.189583, dU 0.051936
 back from force calculation!
-Time to calculate results on CPU = 0.269795 ms
+Time to calculate results on CPU = 0.275557 ms
 
 
 ===============================
@@ -5061,7 +5061,7 @@ gi 7 - gj 28 at pos 2.858804 	 2.915034, 2.854603 	 0.011687, sij 0.279741, forc
 gi 8 - gj 41 at pos 2.948233 	 2.691306, 2.763944 	 2.742461, sij 0.279741, force -1.089514 0.302429
 , ftmp 1.130709, dx -0.184289, rij 0.191257, dU 0.050025
 back from force calculation!
-Time to calculate results on CPU = 0.278178 ms
+Time to calculate results on CPU = 0.27553 ms
 
 
 ===============================
@@ -5130,7 +5130,7 @@ gi 7 - gj 28 at pos 2.858972 	 2.914143, 2.854452 	 0.012556, sij 0.279741, forc
 gi 8 - gj 41 at pos 2.949013 	 2.690976, 2.763037 	 2.742361, sij 0.279741, force -1.069093 0.295390
 , ftmp 1.109150, dx -0.185976, rij 0.192944, dU 0.048135
 back from force calculation!
-Time to calculate results on CPU = 0.277005 ms
+Time to calculate results on CPU = 0.27327 ms
 
 
 ===============================
@@ -5199,7 +5199,7 @@ gi 7 - gj 28 at pos 2.859146 	 2.913249, 2.854295 	 0.013428, sij 0.279741, forc
 gi 8 - gj 41 at pos 2.949796 	 2.690643, 2.762122 	 2.742261, sij 0.279741, force -1.048503 0.288382
 , ftmp 1.087438, dx -0.187674, rij 0.194643, dU 0.046269
 back from force calculation!
-Time to calculate results on CPU = 0.278898 ms
+Time to calculate results on CPU = 0.2722 ms
 
 
 ===============================
@@ -5268,7 +5268,7 @@ gi 7 - gj 28 at pos 2.859327 	 2.912353, 2.854130 	 0.014302, sij 0.279741, forc
 gi 8 - gj 41 at pos 2.950583 	 2.690307, 2.761200 	 2.742162, sij 0.279741, force -1.027749 0.281406
 , ftmp 1.065578, dx -0.189383, rij 0.196354, dU 0.044428
 back from force calculation!
-Time to calculate results on CPU = 0.27381 ms
+Time to calculate results on CPU = 0.280434 ms
 
 
 ===============================
@@ -5337,7 +5337,7 @@ gi 7 - gj 28 at pos 2.859515 	 2.911454, 2.853959 	 0.015179, sij 0.279741, forc
 gi 8 - gj 41 at pos 2.951374 	 2.689969, 2.760272 	 2.742063, sij 0.279741, force -1.006837 0.274462
 , ftmp 1.043575, dx -0.191103, rij 0.198076, dU 0.042612
 back from force calculation!
-Time to calculate results on CPU = 0.274214 ms
+Time to calculate results on CPU = 0.27415 ms
 
 
 ===============================
@@ -5406,7 +5406,7 @@ gi 7 - gj 28 at pos 2.859710 	 2.910555, 2.853781 	 0.016057, sij 0.279741, forc
 gi 8 - gj 41 at pos 2.952169 	 2.689629, 2.759337 	 2.741966, sij 0.279741, force -0.985771 0.267552
 , ftmp 1.021435, dx -0.192832, rij 0.199809, dU 0.040823
 back from force calculation!
-Time to calculate results on CPU = 0.281711 ms
+Time to calculate results on CPU = 0.279158 ms
 
 
 ===============================
@@ -5473,7 +5473,7 @@ gi 7 - gj 28 at pos 2.859912 	 2.909653, 2.853596 	 0.016937, sij 0.279741, forc
 gi 8 - gj 41 at pos 2.952967 	 2.689286, 2.758396 	 2.741870, sij 0.279741, force -0.964558 0.260676
 , ftmp 0.999161, dx -0.194571, rij 0.201551, dU 0.039062
 back from force calculation!
-Time to calculate results on CPU = 0.272814 ms
+Time to calculate results on CPU = 0.269413 ms
 
 
 ===============================
@@ -5540,7 +5540,7 @@ gi 7 - gj 28 at pos 2.860121 	 2.908751, 2.853404 	 0.017818, sij 0.279741, forc
 gi 8 - gj 41 at pos 2.953768 	 2.688941, 2.757449 	 2.741774, sij 0.279741, force -0.943202 0.253836
 , ftmp 0.976761, dx -0.196319, rij 0.203304, dU 0.037330
 back from force calculation!
-Time to calculate results on CPU = 0.272585 ms
+Time to calculate results on CPU = 0.268084 ms
 
 
 ===============================
@@ -5607,7 +5607,7 @@ gi 7 - gj 28 at pos 2.860337 	 2.907848, 2.853205 	 0.018701, sij 0.279741, forc
 gi 8 - gj 41 at pos 2.954572 	 2.688593, 2.756495 	 2.741680, sij 0.279741, force -0.921709 0.247031
 , ftmp 0.954239, dx -0.198076, rij 0.205067, dU 0.035628
 back from force calculation!
-Time to calculate results on CPU = 0.283671 ms
+Time to calculate results on CPU = 0.275994 ms
 
 
 ===============================
@@ -5674,7 +5674,7 @@ gi 7 - gj 28 at pos 2.860561 	 2.906945, 2.852997 	 0.019584, sij 0.279741, forc
 gi 8 - gj 41 at pos 2.955378 	 2.688243, 2.755537 	 2.741587, sij 0.279741, force -0.900085 0.240262
 , ftmp 0.931600, dx -0.199841, rij 0.206838, dU 0.033958
 back from force calculation!
-Time to calculate results on CPU = 0.265448 ms
+Time to calculate results on CPU = 0.270713 ms
 
 
 ===============================
@@ -5741,7 +5741,7 @@ gi 7 - gj 28 at pos 2.860792 	 2.906041, 2.852783 	 0.020467, sij 0.279741, forc
 gi 8 - gj 41 at pos 2.956187 	 2.687892, 2.754573 	 2.741496, sij 0.279741, force -0.878335 0.233529
 , ftmp 0.908850, dx -0.201614, rij 0.208619, dU 0.032320
 back from force calculation!
-Time to calculate results on CPU = 0.269055 ms
+Time to calculate results on CPU = 0.265854 ms
 
 
 ===============================
@@ -5808,7 +5808,7 @@ gi 7 - gj 28 at pos 2.861032 	 2.905137, 2.852560 	 0.021350, sij 0.279741, forc
 gi 8 - gj 41 at pos 2.956998 	 2.687538, 2.753603 	 2.741406, sij 0.279741, force -0.856465 0.226834
 , ftmp 0.885995, dx -0.203395, rij 0.210407, dU 0.030715
 back from force calculation!
-Time to calculate results on CPU = 0.263665 ms
+Time to calculate results on CPU = 0.267407 ms
 
 
 ===============================
@@ -5875,7 +5875,7 @@ gi 7 - gj 28 at pos 2.861279 	 2.904234, 2.852330 	 0.022234, sij 0.279741, forc
 gi 8 - gj 41 at pos 2.957811 	 2.687182, 2.752629 	 2.741318, sij 0.279741, force -0.834481 0.220175
 , ftmp 0.863038, dx -0.205182, rij 0.212204, dU 0.029144
 back from force calculation!
-Time to calculate results on CPU = 0.267951 ms
+Time to calculate results on CPU = 0.23744 ms
 
 
 ===============================
@@ -5942,7 +5942,7 @@ gi 7 - gj 28 at pos 2.861534 	 2.903331, 2.852091 	 0.023117, sij 0.279741, forc
 gi 8 - gj 41 at pos 2.958625 	 2.686824, 2.751649 	 2.741232, sij 0.279741, force -0.812387 0.213555
 , ftmp 0.839987, dx -0.206976, rij 0.214008, dU 0.027607
 back from force calculation!
-Time to calculate results on CPU = 0.266727 ms
+Time to calculate results on CPU = 0.229888 ms
 
 
 ===============================
@@ -6009,7 +6009,7 @@ gi 7 - gj 28 at pos 2.861798 	 2.902430, 2.851844 	 0.023999, sij 0.279741, forc
 gi 8 - gj 41 at pos 2.959441 	 2.686464, 2.750665 	 2.741148, sij 0.279741, force -0.790190 0.206972
 , ftmp 0.816846, dx -0.208776, rij 0.215819, dU 0.026107
 back from force calculation!
-Time to calculate results on CPU = 0.262087 ms
+Time to calculate results on CPU = 0.232868 ms
 
 
 ===============================
@@ -6076,7 +6076,7 @@ gi 7 - gj 28 at pos 2.862070 	 2.901529, 2.851589 	 0.024880, sij 0.279741, forc
 gi 8 - gj 41 at pos 2.960258 	 2.686102, 2.749677 	 2.741065, sij 0.279741, force -0.767895 0.200427
 , ftmp 0.793621, dx -0.210581, rij 0.217636, dU 0.024644
 back from force calculation!
-Time to calculate results on CPU = 0.264897 ms
+Time to calculate results on CPU = 0.242798 ms
 
 
 ===============================
@@ -6143,7 +6143,7 @@ gi 7 - gj 28 at pos 2.862350 	 2.900630, 2.851325 	 0.025760, sij 0.279741, forc
 gi 8 - gj 41 at pos 2.961077 	 2.685738, 2.748685 	 2.740985, sij 0.279741, force -0.745508 0.193920
 , ftmp 0.770317, dx -0.212392, rij 0.219460, dU 0.023218
 back from force calculation!
-Time to calculate results on CPU = 0.265103 ms
+Time to calculate results on CPU = 0.228106 ms
 
 
 ===============================
@@ -6210,7 +6210,7 @@ gi 7 - gj 28 at pos 2.862639 	 2.899733, 2.851052 	 0.026638, sij 0.279741, forc
 gi 8 - gj 41 at pos 2.961896 	 2.685373, 2.747688 	 2.740907, sij 0.279741, force -0.723036 0.187451
 , ftmp 0.746939, dx -0.214207, rij 0.221289, dU 0.021830
 back from force calculation!
-Time to calculate results on CPU = 0.278377 ms
+Time to calculate results on CPU = 0.241487 ms
 
 
 ===============================
@@ -6273,7 +6273,7 @@ gi 7 - gj 28 at pos 2.862937 	 2.898838, 2.850771 	 0.027514, sij 0.279741, forc
 gi 8 - gj 41 at pos 2.962715 	 2.685006, 2.746688 	 2.740832, sij 0.279741, force -0.700482 0.181020
 , ftmp 0.723494, dx -0.216027, rij 0.223124, dU 0.020481
 back from force calculation!
-Time to calculate results on CPU = 0.255407 ms
+Time to calculate results on CPU = 0.218415 ms
 
 
 ===============================
@@ -6336,7 +6336,7 @@ gi 7 - gj 28 at pos 2.863243 	 2.897946, 2.850481 	 0.028389, sij 0.279741, forc
 gi 8 - gj 41 at pos 2.963535 	 2.684637, 2.745684 	 2.740759, sij 0.279741, force -0.677855 0.174626
 , ftmp 0.699987, dx -0.217851, rij 0.224963, dU 0.019172
 back from force calculation!
-Time to calculate results on CPU = 0.260263 ms
+Time to calculate results on CPU = 0.227901 ms
 
 
 ===============================
@@ -6399,7 +6399,7 @@ gi 7 - gj 28 at pos 2.863559 	 2.897056, 2.850181 	 0.029261, sij 0.279741, forc
 gi 8 - gj 41 at pos 2.964355 	 2.684267, 2.744677 	 2.740688, sij 0.279741, force -0.655158 0.168271
 , ftmp 0.676422, dx -0.219677, rij 0.226807, dU 0.017903
 back from force calculation!
-Time to calculate results on CPU = 0.25144 ms
+Time to calculate results on CPU = 0.219796 ms
 
 
 ===============================
@@ -6462,7 +6462,7 @@ gi 7 - gj 28 at pos 2.863884 	 2.896168, 2.849873 	 0.030130, sij 0.279741, forc
 gi 8 - gj 41 at pos 2.965175 	 2.683895, 2.743667 	 2.740621, sij 0.279741, force -0.632398 0.161952
 , ftmp 0.652807, dx -0.221507, rij 0.228655, dU 0.016674
 back from force calculation!
-Time to calculate results on CPU = 0.253494 ms
+Time to calculate results on CPU = 0.214956 ms
 
 
 ===============================
@@ -6525,7 +6525,7 @@ gi 7 - gj 28 at pos 2.864218 	 2.895284, 2.849555 	 0.030996, sij 0.279741, forc
 gi 8 - gj 41 at pos 2.965994 	 2.683521, 2.742654 	 2.740556, sij 0.279741, force -0.609582 0.155672
 , ftmp 0.629145, dx -0.223339, rij 0.230507, dU 0.015488
 back from force calculation!
-Time to calculate results on CPU = 0.254594 ms
+Time to calculate results on CPU = 0.230988 ms
 
 
 ===============================
@@ -6588,7 +6588,7 @@ gi 7 - gj 28 at pos 2.864561 	 2.894404, 2.849228 	 0.031859, sij 0.279741, forc
 gi 8 - gj 41 at pos 2.966813 	 2.683146, 2.741639 	 2.740495, sij 0.279741, force -0.586714 0.149428
 , ftmp 0.605443, dx -0.225174, rij 0.232362, dU 0.014343
 back from force calculation!
-Time to calculate results on CPU = 0.253047 ms
+Time to calculate results on CPU = 0.196016 ms
 
 
 ===============================
@@ -6651,7 +6651,7 @@ gi 7 - gj 28 at pos 2.864914 	 2.893526, 2.848891 	 0.032719, sij 0.279741, forc
 gi 8 - gj 41 at pos 2.967631 	 2.682770, 2.740621 	 2.740437, sij 0.279741, force -0.563800 0.143220
 , ftmp 0.581707, dx -0.227009, rij 0.234219, dU 0.013240
 back from force calculation!
-Time to calculate results on CPU = 0.253441 ms
+Time to calculate results on CPU = 0.196158 ms
 
 
 ===============================
@@ -6714,7 +6714,7 @@ gi 7 - gj 28 at pos 2.865276 	 2.892653, 2.848544 	 0.033575, sij 0.279741, forc
 gi 8 - gj 41 at pos 2.968447 	 2.682393, 2.739601 	 2.740382, sij 0.279741, force -0.540847 0.137049
 , ftmp 0.557941, dx -0.228846, rij 0.236079, dU 0.012180
 back from force calculation!
-Time to calculate results on CPU = 0.260534 ms
+Time to calculate results on CPU = 0.192895 ms
 
 
 ===============================
@@ -6777,7 +6777,7 @@ gi 7 - gj 28 at pos 2.865649 	 2.891784, 2.848187 	 0.034427, sij 0.279741, forc
 gi 8 - gj 41 at pos 2.969263 	 2.682014, 2.738579 	 2.740330, sij 0.279741, force -0.517861 0.130914
 , ftmp 0.534152, dx -0.230684, rij 0.237941, dU 0.011164
 back from force calculation!
-Time to calculate results on CPU = 0.263985 ms
+Time to calculate results on CPU = 0.195208 ms
 
 
 ===============================
@@ -6838,7 +6838,7 @@ gi 7 - gj 28 at pos 2.866031 	 2.890920, 2.847821 	 0.035275, sij 0.279741, forc
 gi 8 - gj 41 at pos 2.970077 	 2.681634, 2.737555 	 2.740282, sij 0.279741, force -0.494847 0.124815
 , ftmp 0.510345, dx -0.232521, rij 0.239804, dU 0.010191
 back from force calculation!
-Time to calculate results on CPU = 0.255624 ms
+Time to calculate results on CPU = 0.19771 ms
 
 
 ===============================
