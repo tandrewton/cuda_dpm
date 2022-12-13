@@ -3,7 +3,7 @@
 # CUDA
 #
 # This Makefile will only work if executed on a GPU node.
-#
+# PAT github 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
 
 NVCC = nvcc
 
