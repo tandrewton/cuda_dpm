@@ -14,7 +14,7 @@
 using namespace std;
 
 // cuda kernels
-__global__ void kernelVertexForces(double* radius, double* pos, double* force, double energy) {
+__global__ void kernelVertexForces(double* radius, double* pos, double* force, double* energy) {
   // compare to : vertexRepulsiveForces2D
   /*what does this function need passed into it?
   serial algorithm:
@@ -39,6 +39,7 @@ __global__ void kernelVertexForces(double* radius, double* pos, double* force, d
   int gi = vertexID;
   int NDIM = 2;
   double sij, dx, dy, rij, fx, fy, ftmp;
+  energy[NDIM * vertexID] = 0.0;
 
   // memCpyToSymbol rho0, L[0], L[1], kc in set
 
@@ -76,13 +77,13 @@ __global__ void kernelVertexForces(double* radius, double* pos, double* force, d
             // in serial code, would use Newton's second law to cut computation in half. Here, we just go through all particles and don't take advantage of double counting
 
             // store the energy of half the interaction. the other half comes when we double count gi-gj as gj-gi
-            energy += 0.5 * 0.5 * d_kc * pow((1 - (rij / sij)), 2.0);
+            energy[vertexID] += 0.5 * 0.5 * d_kc * pow((1 - (rij / sij)), 2.0);
           }
         }
       }
     }
   }
-  printf("total energy = %f\n", energy);
+  printf("total energy = %f\n", energy[vertexID]);
 }
 
 /******************************
@@ -2551,16 +2552,17 @@ void dpm::cudaVertexNVE(ofstream& enout, double T, double dt0, int NT, int NPRIN
     // kernelVertexForces has output : force array (full), energy
     // setDeviceVariables();
 
-    double *dev_r, *dev_x, *dev_F;
+    double *dev_r, *dev_x, *dev_F, *dev_vertexEnergy;
 
     size_t sizeR = r.size() * sizeof(double);
     size_t sizeX = x.size() * sizeof(double);
     size_t sizeF = F.size() * sizeof(double);
-    double energy = 0.0;
+    size_t sizeVertexEnergy = vertexEnergy.size() * sizeof(double);
 
     cudaMalloc((void**)&dev_r, sizeR);  // allocate memory on device
     cudaMalloc((void**)&dev_x, sizeX);
     cudaMalloc((void**)&dev_F, sizeF);
+    cudaMalloc((void**)&dev_vertexEnergy, sizeVertexEnergy);
 
     cudaMemcpy(dev_r, &r[0], sizeR, cudaMemcpyHostToDevice);
     cudaMemcpy(dev_x, &x[0], sizeX, cudaMemcpyHostToDevice);
@@ -2586,10 +2588,13 @@ void dpm::cudaVertexNVE(ofstream& enout, double T, double dt0, int NT, int NPRIN
 
     printf("Back from kernel\n");
     cudaMemcpy(&F[0], dev_F, sizeF, cudaMemcpyDeviceToHost);
+    cudaMemcpy(&vertexEnergy[0], dev_vertexEnergy, sizeVertexEnergy, cudaMemcpyDeviceToHost);
 
     printf("Time to calculate results on GPU: %f ms.\n", elapsed_time_ms);  // exec. time
 
-    U += energy;
+    for (i = 0; i < NVTOT; i++) {
+      U += vertexEnergy[i];
+    }
 
     // VV VELOCITY UPDATE #2
     for (i = 0; i < vertDOF; i++)

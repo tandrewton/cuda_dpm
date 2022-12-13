@@ -96,6 +96,7 @@ class dpm {
   std::vector<double> x;
   std::vector<double> v;
   std::vector<double> F;
+  std::vector<double> vertexEnergy;
 
   // macroscopic stress vector
   std::vector<double> stress;
