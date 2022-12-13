@@ -42,7 +42,7 @@ __global__ void kernelVertexForces(double* radius, double* pos, double* force, d
     int NDIM = 2;
     double sij, dx, dy, rij, fx, fy, ftmp;
 
-    energy[NDIM * vertexID] = 0.0;
+    energy[vertexID] = 0.0;
     ci = gi / d_numVertsPerCell;
 
     double thisRad, otherRad, interaction = 0;

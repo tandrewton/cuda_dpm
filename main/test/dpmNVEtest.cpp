@@ -9,6 +9,8 @@ finding that the coordinates are the same between frames, but the computed force
 
 re-ordered memcpy and energy zeroing, and now first frames are identical to precision! great.
 but next frame is messed up, with huge error. debugging now
+
+forces weren't adding up, but that's because of an ordering bug I had, fixed it in serial code. no bug in gpu code?
 */
 
 // header files
