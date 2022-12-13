@@ -480,6 +480,7 @@ void dpm::initializeVertexIndexing2D() {
   x.resize(vertDOF);
   v.resize(vertDOF);
   F.resize(vertDOF);
+  vertexEnergy.resize(NVTOT);
 }
 
 // initialize vertex shape parameters and (a0, l0, t0, r) based on nv (nref is the reference nv, smallest nv among the polydispersity)
