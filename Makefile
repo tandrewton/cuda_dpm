@@ -9,7 +9,7 @@ NVCC = nvcc
 
 NVCCFLAGS = -O3 -Wno-deprecated-gpu-targets -g
 
-LFLAGS = -lm -Wno-deprecated-gpu-targets -g -lcudart
+LFLAGS = -lm -Wno-deprecated-gpu-targets -lcudart
 
 # CUDA library directory:
 CUDA_LIB_DIR= -L$(CUDA_ROOT_DIR)/lib64
