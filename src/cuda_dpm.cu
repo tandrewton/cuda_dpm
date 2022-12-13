@@ -2525,7 +2525,7 @@ void dpm::cudaVertexNVE(ofstream& enout, double T, double dt0, int NT, int NPRIN
   // local variables
   int t, i;
   double K, simclock;
-  int dimBlock = 1024;
+  int dimBlock = 256;
   cudaEvent_t start, stop;  // using cuda events to measure time
   float elapsed_time_ms;    // which is applicable for asynchronous code also
 
