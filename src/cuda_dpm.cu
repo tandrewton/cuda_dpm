@@ -2576,8 +2576,6 @@ void dpm::cudaVertexNVE(ofstream& enout, double T, double dt0, int NT, int NPRIN
     // kernelVertexForces has output : force array (full), energy
     // setDeviceVariables();
 
-    printf("Launching kernel\n");
-
     cudaEventCreate(&start);  // instrument code to measure start time
     cudaEventCreate(&stop);
     cudaEventRecord(start, 0);
@@ -2594,13 +2592,12 @@ void dpm::cudaVertexNVE(ofstream& enout, double T, double dt0, int NT, int NPRIN
     // FORCE UPDATE
     kernelVertexForces<<<dimGrid, dimBlock>>>(dev_r, dev_x, dev_F, dev_vertexEnergy);
 
+    cudaMemcpy(&F[0], dev_F, sizeF, cudaMemcpyDeviceToHost);
+    cudaMemcpy(&vertexEnergy[0], dev_vertexEnergy, sizeVertexEnergy, cudaMemcpyDeviceToHost);
+
     cudaEventRecord(stop, 0);  // instrument code to measure end time
     cudaEventSynchronize(stop);
     cudaEventElapsedTime(&elapsed_time_ms, start, stop);
-
-    printf("Back from kernel\n");
-    cudaMemcpy(&F[0], dev_F, sizeF, cudaMemcpyDeviceToHost);
-    cudaMemcpy(&vertexEnergy[0], dev_vertexEnergy, sizeVertexEnergy, cudaMemcpyDeviceToHost);
 
     printf("Time to calculate results on GPU: %f ms.\n", elapsed_time_ms);  // exec. time
 
@@ -2616,7 +2613,7 @@ void dpm::cudaVertexNVE(ofstream& enout, double T, double dt0, int NT, int NPRIN
     simclock += dt;
 
     // print to console and file
-    if (t % NPRINTSKIP == 0) {
+    /*if (t % NPRINTSKIP == 0) {
       // compute kinetic energy
       K = vertexKineticEnergy();
 
@@ -2646,7 +2643,7 @@ void dpm::cudaVertexNVE(ofstream& enout, double T, double dt0, int NT, int NPRIN
       // print to configuration only if position file is open
       if (posout.is_open())
         printConfiguration2D();
-    }
+    }*/
   }
 }
 

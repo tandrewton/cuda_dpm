@@ -2444,7 +2444,7 @@ void dpm::vertexNVE2D(ofstream& enout, dpmMemFn forceCall, double T, double dt0,
     // update sim clock
     simclock += dt;
 
-    // print to console and file
+    /*// print to console and file
     if (t % NPRINTSKIP == 0) {
       // compute kinetic energy
       K = vertexKineticEnergy();
@@ -2475,7 +2475,7 @@ void dpm::vertexNVE2D(ofstream& enout, dpmMemFn forceCall, double T, double dt0,
       // print to configuration only if position file is open
       if (posout.is_open())
         printConfiguration2D();
-    }
+    }*/
   }
 }
 
