@@ -50,8 +50,8 @@ __global__ void kernelVertexForces(double* radius, double* pos, double* force, d
     getVertexPos(vertexID, pos, thisPos);
     thisRad = radius[vertexID];
     // printf("vertexId %d > d_numVertices %d\n", vertexID, d_numVertices);
-    force[vertexID * NDIM] = 1.0;
-    force[vertexID * NDIM + 1] = 2.0;
+    // force[vertexID * NDIM] = 1.0;
+    // force[vertexID * NDIM + 1] = 2.0;
 
     for (int gj = 0; gj < d_numVertices; gj++) {
       // contact distance
@@ -84,9 +84,9 @@ __global__ void kernelVertexForces(double* radius, double* pos, double* force, d
         }
       }
     }
+    // printf("total energy = %f\n", energy[vertexID]);
+    printf("force on vertex %d = %f %f\n", vertexID, force[NDIM * gi], force[NDIM * gi + 1]);
   }
-  // printf("total energy = %f\n", energy[vertexID]);
-  printf("force on vertex %d = %f %f\n", vertexID, force[NDIM * gi], force[NDIM * gi + 1]);
 }
 
 /******************************
