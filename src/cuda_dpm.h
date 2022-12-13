@@ -125,7 +125,6 @@ class dpm {
 
   // cuda variables
   int dimBlock, dimGrid;
-  int d_numVertices;
 
  public:
   // Constructors and Destructors
