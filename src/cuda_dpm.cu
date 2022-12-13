@@ -36,16 +36,15 @@ __global__ void kernelVertexForces(double* radius, double* pos, double* force, d
   cudaMemCpyToSymbol all of the relevant values like rho0, L[0], L[1], kc
   */
   int vertexID = threadIdx.x + blockDim.x * blockIdx.x;
-  int gi = vertexID, ci, cj;
-  int NDIM = 2;
-  double sij, dx, dy, rij, fx, fy, ftmp;
-  energy[NDIM * vertexID] = 0.0;
-  ci = gi / d_numVertsPerCell;
 
-  // memCpyToSymbol rho0, L[0], L[1], kc in set
-
-  // printf("vertexID = %d\n", vertexID);
   if (vertexID < d_numVertices) {
+    int gi = vertexID, ci, cj;
+    int NDIM = 2;
+    double sij, dx, dy, rij, fx, fy, ftmp;
+
+    energy[NDIM * vertexID] = 0.0;
+    ci = gi / d_numVertsPerCell;
+
     double thisRad, otherRad, interaction = 0;
     double thisPos[2], otherPos[2];
     getVertexPos(vertexID, pos, thisPos);

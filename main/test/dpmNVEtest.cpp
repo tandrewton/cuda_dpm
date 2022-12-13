@@ -6,6 +6,9 @@
 /*current status: removed polydisperse function, switched to monodisperse
 // comparing first frame of simulation between cudaTest and serialTest
 finding that the coordinates are the same between frames, but the computed forces are actually a bit different
+
+re-ordered memcpy and energy zeroing, and now first frames are identical to precision! great.
+but next frame is messed up, with huge error. debugging now
 */
 
 // header files
