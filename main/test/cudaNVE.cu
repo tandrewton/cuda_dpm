@@ -62,7 +62,7 @@ int main() {
   double tskip = 10.0;
   int NT = (int)floor(ttotal / dt0);
   int NPRINTSKIP = (int)floor(tskip / dt0);*/
-  int NT = 10;
+  int NT = 3;
   int NPRINTSKIP = 1;
   // configobj2D.vertexNVE2D(enout, forceUpdate, T, dt0, NT, NPRINTSKIP);
 
