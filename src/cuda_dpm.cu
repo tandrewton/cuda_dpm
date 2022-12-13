@@ -69,8 +69,8 @@ __global__ void kernelVertexForces(double* radius, double* pos, double* force, d
         if (dy < sij) {
           rij = sqrt(dx * dx + dy * dy);
           if (rij < sij) {
-            printf("gi %d interacting with gj %d at positions %f \t %f, %f \t %f with sij %f\n", vertexID, gj, pos[NDIM * gi], pos[NDIM * gi + 1], pos[NDIM * gj], pos[NDIM * gj + 1], sij);
-            // force scale
+            // printf("gi %d interacting with gj %d at positions %f \t %f, %f \t %f with sij %f\n", vertexID, gj, pos[NDIM * gi], pos[NDIM * gi + 1], pos[NDIM * gj], pos[NDIM * gj + 1], sij);
+            //  force scale
             ftmp = d_kc * (1 - (rij / sij)) * (d_rho0 / sij);
             fx = ftmp * (dx / rij);
             fy = ftmp * (dy / rij);
