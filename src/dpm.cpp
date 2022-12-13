@@ -1751,7 +1751,7 @@ void dpm::vertexRepulsiveForces2D() {
           if (dy < sij) {
             rij = sqrt(dx * dx + dy * dy);
             if (rij < sij) {
-              printf("gi %d interacting with gj %d at positions %f \t %f, %f \t %f with sij %f and force %f %f\n", gi, gj, x[NDIM * gi], x[NDIM * gi + 1], x[NDIM * gj], x[NDIM * gj + 1], sij, fx, fy);
+              printf("gi %d interacting with gj %d at positions %f \t %f, %f \t %f with sij %f and force %f %f, rho0 %f\n", gi, gj, x[NDIM * gi], x[NDIM * gi + 1], x[NDIM * gj], x[NDIM * gj + 1], sij, fx, fy, rho0);
 
               //  force scale
               ftmp = kc * (1 - (rij / sij)) * (rho0 / sij);
@@ -1827,7 +1827,7 @@ void dpm::vertexRepulsiveForces2D() {
             if (dy < sij) {
               rij = sqrt(dx * dx + dy * dy);
               if (rij < sij) {
-                printf("gi %d interacting with gj %d at positions %f \t %f, %f \t %f with sij %f and force %f %f\n", gi, gj, x[NDIM * gi], x[NDIM * gi + 1], x[NDIM * gj], x[NDIM * gj + 1], sij, fx, fy);
+                printf("gi %d interacting with gj %d at positions %f \t %f, %f \t %f with sij %f and force %f %f, rho0 %f\n", gi, gj, x[NDIM * gi], x[NDIM * gi + 1], x[NDIM * gj], x[NDIM * gj + 1], sij, fx, fy, rho0);
                 //  force scale
                 ftmp = kc * (1 - (rij / sij)) * (rho0 / sij);
                 fx = ftmp * (dx / rij);
