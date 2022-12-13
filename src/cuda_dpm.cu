@@ -2604,8 +2604,8 @@ void dpm::cudaVertexNVE(ofstream& enout, double T, double dt0, int NT, int NPRIN
     cudaMemcpy(&vertexEnergy[0], dev_vertexEnergy, sizeVertexEnergy, cudaMemcpyDeviceToHost);
 
     printf("Time to calculate results on GPU: %f ms.\n", elapsed_time_ms);  // exec. time
-    =
-        for (i = 0; i < NVTOT; i++) {
+
+    for (i = 0; i < NVTOT; i++) {
       U += vertexEnergy[i];
     }
 
