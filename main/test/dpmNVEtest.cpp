@@ -3,6 +3,8 @@
 // Compilation command:
 // g++ -O3 --std=c++11 -I src main/test/dpmNVEtest.cpp src/dpm.cpp -o serialTest.o
 
+// current status: odd number of force calls in GPU (35). should not be possible. debugging as is, comparing printouts and force accesses in serial and GPU. maybe has to do with my vertexID/nv? Probably, since we are polydisperse?
+
 // header files
 #include "dpm.h"
 
