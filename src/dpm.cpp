@@ -1766,7 +1766,7 @@ void dpm::vertexRepulsiveForces2D() {
               // increase potential energy
               U += 0.5 * kc * pow((1 - (rij / sij)), 2.0);
 
-              printf("gi %d - gj %d at pos %f \t %f, %f \t %f, sij %f, force %f %f\n, ftmp %f, dx %f, rij %f, dU %f\n", gi, gj, x[NDIM * gi], x[NDIM * gi + 1], x[NDIM * gj], x[NDIM * gj + 1], sij, fx, fy, ftmp, dx, rij, 0.5 * kc * pow((1 - (rij / sij)), 2.0));
+              // printf("gi %d - gj %d at pos %f \t %f, %f \t %f, sij %f, force %f %f\n, ftmp %f, dx %f, rij %f, dU %f\n", gi, gj, x[NDIM * gi], x[NDIM * gi + 1], x[NDIM * gj], x[NDIM * gj + 1], sij, fx, fy, ftmp, dx, rij, 0.5 * kc * pow((1 - (rij / sij)), 2.0));
 
               // add to virial stress
               stress[0] += dx * fx;
@@ -1842,7 +1842,7 @@ void dpm::vertexRepulsiveForces2D() {
                 // increase potential energy
                 U += 0.5 * kc * pow((1 - (rij / sij)), 2.0);
 
-                printf("gi %d - gj %d at pos %f \t %f, %f \t %f, sij %f, force %f %f\n, ftmp %f, dx %f, rij %f, dU %f\n", gi, gj, x[NDIM * gi], x[NDIM * gi + 1], x[NDIM * gj], x[NDIM * gj + 1], sij, fx, fy, ftmp, dx, rij, 0.5 * kc * pow((1 - (rij / sij)), 2.0));
+                // printf("gi %d - gj %d at pos %f \t %f, %f \t %f, sij %f, force %f %f\n, ftmp %f, dx %f, rij %f, dU %f\n", gi, gj, x[NDIM * gi], x[NDIM * gi + 1], x[NDIM * gj], x[NDIM * gj + 1], sij, fx, fy, ftmp, dx, rij, 0.5 * kc * pow((1 - (rij / sij)), 2.0));
 
                 // add to virial stress
                 stress[0] += dx * fx;

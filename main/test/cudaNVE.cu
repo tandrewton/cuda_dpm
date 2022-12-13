@@ -14,9 +14,10 @@
 
 using namespace std;
 
-int main() {
+int main(int argc, char* argv[]) {
   // local variables
-  int NCELLS = 4, nsmall = 14, seed = 1;
+  int NCELLS = atoi(argv[1]);
+  int nsmall = 14, seed = 1;
   double phi0 = 0.6, calA0 = 1.2, smallfrac = 0.5, sizefrac = 1.4, Ftol = 1e-12, Ptol = 1e-8, dt0 = 1e-2;
   double ka = 1.0, kl = 1.0, kb = 0.1, kc = 1.0, boxLengthScale = 2.5;
 
