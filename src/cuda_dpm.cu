@@ -54,6 +54,8 @@ __global__ void kernelVertexForces(double* radius, double* pos, double* force, d
     // force[vertexID * NDIM + 1] = 2.0;
 
     for (int gj = 0; gj < d_numVertices; gj++) {
+      if (gi == gj)
+        continue;
       // contact distance
       sij = thisRad + radius[gj];
       // particle distance
