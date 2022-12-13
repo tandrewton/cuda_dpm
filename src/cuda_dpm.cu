@@ -35,7 +35,6 @@ __global__ void kernelVertexForces(double* radius, double* pos, double* force, d
   parallel algorithm 2: don't sort the neighbor list?
   cudaMemCpyToSymbol all of the relevant values like rho0, L[0], L[1], kc
   */
-  printf("d_numVertices %d, d_rho0 %f, d_L[0] %f, d_kc %f\n", d_numVertices, d_rho0, d_L[0], d_kc);
   int vertexID = threadIdx.x + blockDim.x * blockIdx.x;
   int gi = vertexID;
   int NDIM = 2;
@@ -45,8 +44,6 @@ __global__ void kernelVertexForces(double* radius, double* pos, double* force, d
 
   // printf("vertexID = %d\n", vertexID);
   if (vertexID < d_numVertices) {
-    printf("d_numVertices %d, vertexID %d\n", d_numVertices, vertexID);
-
     double thisRad, otherRad, interaction = 0;
     double thisPos[2], otherPos[2];
     getVertexPos(vertexID, pos, thisPos);

@@ -13,7 +13,7 @@ using namespace std;
 
 int main() {
   // local variables
-  int NCELLS = 12, nsmall = 32, seed = 1;
+  int NCELLS = 6, nsmall = 20, seed = 1;
   double phi0 = 0.6, calA0 = 1.2, smallfrac = 0.5, sizefrac = 1.4, Ftol = 1e-12, Ptol = 1e-8, dt0 = 1e-2;
   double ka = 1.0, kl = 1.0, kb = 0.1, kc = 1.0, boxLengthScale = 2.5;
 
@@ -59,7 +59,7 @@ int main() {
   double tskip = 10.0;
   int NT = (int)floor(ttotal / dt0);
   int NPRINTSKIP = (int)floor(tskip / dt0);*/
-  int NT = 5;
+  int NT = 1;
   int NPRINTSKIP = 1;
   configobj2D.vertexNVE2D(enout, forceUpdate, T, dt0, NT, NPRINTSKIP);
 
