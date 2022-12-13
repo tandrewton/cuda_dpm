@@ -2580,7 +2580,6 @@ void dpm::cudaVertexNVE(ofstream& enout, double T, double dt0, int NT, int NPRIN
     cudaMemcpy(dev_r, &r[0], sizeR, cudaMemcpyHostToDevice);
     cudaMemcpy(dev_x, &x[0], sizeX, cudaMemcpyHostToDevice);
     cudaMemcpy(dev_F, &F[0], sizeF, cudaMemcpyHostToDevice);
-    cout << "sizeX, sizeF, sizeVertexEnergy = " << sizeX << '\t' << sizeF << '\t' << sizeVertexEnergy << '\n';
 
     printf("Launching kernel\n");
 
@@ -2605,12 +2604,8 @@ void dpm::cudaVertexNVE(ofstream& enout, double T, double dt0, int NT, int NPRIN
     cudaMemcpy(&vertexEnergy[0], dev_vertexEnergy, sizeVertexEnergy, cudaMemcpyDeviceToHost);
 
     printf("Time to calculate results on GPU: %f ms.\n", elapsed_time_ms);  // exec. time
-
-    if (std::isnan(F[0])) {
-      cout << "F[0] is nan!\n";
-    }
-
-    for (i = 0; i < NVTOT; i++) {
+    =
+        for (i = 0; i < NVTOT; i++) {
       U += vertexEnergy[i];
     }
 
@@ -2625,13 +2620,6 @@ void dpm::cudaVertexNVE(ofstream& enout, double T, double dt0, int NT, int NPRIN
     if (t % NPRINTSKIP == 0) {
       // compute kinetic energy
       K = vertexKineticEnergy();
-
-      if (std::isnan(K)) {
-        cout << "K is nan!\n";
-        for (int i = 0; i < vertDOF; i++) {
-          cout << "v[" << i << "] = " << v[i] << '\n';
-        }
-      }
 
       // print to console
       cout << endl
