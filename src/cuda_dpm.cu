@@ -74,6 +74,8 @@ __global__ void kernelVertexForces(double* radius, double* pos, double* force, d
             // add to forces
             force[NDIM * gi] -= fx;
             force[NDIM * gi + 1] -= fy;
+            printf("fx %f fy %f ftmp %f dx %f dy %f rij %f\n", fx, fy, ftmp, dx, dy, rij);
+
             // in serial code, would use Newton's second law to cut computation in half. Here, we just go through all particles and don't take advantage of double counting
 
             // store the energy of half the interaction. the other half comes when we double count gi-gj as gj-gi
