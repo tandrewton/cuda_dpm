@@ -69,7 +69,6 @@ __global__ void kernelVertexForces(double* radius, double* pos, double* force, d
         if (dy < sij) {
           rij = sqrt(dx * dx + dy * dy);
           if (rij < sij) {
-            printf("gi %d interacting with gj %d at positions %f \t %f, %f \t %f with sij %f and force %f %f\n", vertexID, gj, pos[NDIM * gi], pos[NDIM * gi + 1], pos[NDIM * gj], pos[NDIM * gj + 1], sij, fx, fy);
             //  force scale
             ftmp = d_kc * (1 - (rij / sij)) * (d_rho0 / sij);
             fx = ftmp * (dx / rij);
@@ -78,7 +77,8 @@ __global__ void kernelVertexForces(double* radius, double* pos, double* force, d
             // add to forces
             force[NDIM * gi] -= fx;
             force[NDIM * gi + 1] -= fy;
-            // printf("fx %f fy %f ftmp %f dx %f dy %f rij %f\n", fx, fy, ftmp, dx, dy, rij);
+
+            printf("gi %d interacting with gj %d at positions %f \t %f, %f \t %f with sij %f and force %f %f\n", vertexID, gj, pos[NDIM * gi], pos[NDIM * gi + 1], pos[NDIM * gj], pos[NDIM * gj + 1], sij, fx, fy);
 
             // in serial code, would use Newton's second law to cut computation in half. Here, we just go through all particles and don't take advantage of double counting
 
