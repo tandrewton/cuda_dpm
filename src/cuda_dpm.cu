@@ -2543,6 +2543,18 @@ void dpm::cudaVertexNVE(ofstream& enout, double T, double dt0, int NT, int NPRIN
   // initialize velocities
   drawVelocities2D(T);
 
+  size_t sizeR = r.size() * sizeof(double);
+  size_t sizeX = x.size() * sizeof(double);
+  size_t sizeF = F.size() * sizeof(double);
+  size_t sizeVertexEnergy = vertexEnergy.size() * sizeof(double);
+
+  cudaMalloc((void**)&dev_r, sizeR);  // allocate memory on device
+  cudaMalloc((void**)&dev_x, sizeX);
+  cudaMalloc((void**)&dev_F, sizeF);
+  cudaMalloc((void**)&dev_vertexEnergy, sizeVertexEnergy);
+
+  double *dev_r, *dev_x, *dev_F, *dev_vertexEnergy;
+
   // loop over time, print energy
   for (t = 0; t < NT; t++) {
     // VV VELOCITY UPDATE #1
@@ -2565,22 +2577,6 @@ void dpm::cudaVertexNVE(ofstream& enout, double T, double dt0, int NT, int NPRIN
     // kernelVertexForces has output : force array (full), energy
     // setDeviceVariables();
 
-    double *dev_r, *dev_x, *dev_F, *dev_vertexEnergy;
-
-    size_t sizeR = r.size() * sizeof(double);
-    size_t sizeX = x.size() * sizeof(double);
-    size_t sizeF = F.size() * sizeof(double);
-    size_t sizeVertexEnergy = vertexEnergy.size() * sizeof(double);
-
-    cudaMalloc((void**)&dev_r, sizeR);  // allocate memory on device
-    cudaMalloc((void**)&dev_x, sizeX);
-    cudaMalloc((void**)&dev_F, sizeF);
-    cudaMalloc((void**)&dev_vertexEnergy, sizeVertexEnergy);
-
-    cudaMemcpy(dev_r, &r[0], sizeR, cudaMemcpyHostToDevice);
-    cudaMemcpy(dev_x, &x[0], sizeX, cudaMemcpyHostToDevice);
-    cudaMemcpy(dev_F, &F[0], sizeF, cudaMemcpyHostToDevice);
-
     printf("Launching kernel\n");
 
     cudaEventCreate(&start);  // instrument code to measure start time
@@ -2591,6 +2587,10 @@ void dpm::cudaVertexNVE(ofstream& enout, double T, double dt0, int NT, int NPRIN
     // timed for fairness in comparing speeds with serial code
     resetForcesAndEnergy();
     shapeForces2D();
+
+    cudaMemcpy(dev_r, &r[0], sizeR, cudaMemcpyHostToDevice);
+    cudaMemcpy(dev_x, &x[0], sizeX, cudaMemcpyHostToDevice);
+    cudaMemcpy(dev_F, &F[0], sizeF, cudaMemcpyHostToDevice);
 
     // FORCE UPDATE
     kernelVertexForces<<<dimGrid, dimBlock>>>(dev_r, dev_x, dev_F, dev_vertexEnergy);

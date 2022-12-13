@@ -5,9 +5,9 @@
 
 
 ===========================================
-		I N I T I A L  S P 			
- 	F I R E 						
-		M I N I M I Z A T I O N 	
+		I N I T I A L  S P
+ 	F I R E
+		M I N I M I Z A T I O N
 ===========================================
 
 	** fireit = 0
@@ -22,11 +22,11 @@
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 ===========================================
- 	F I R E 						
+ 	F I R E
 		M I N I M I Z A T I O N 	
-	C O N V E R G E D! 				
+	C O N V E R G E D!
 
-	(for initial disk minimization) 
+	(for initial disk minimization)
 ===========================================
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
@@ -97,9 +97,9 @@ Time to calculate results on CPU = 0.374418 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 0 / 100
@@ -166,9 +166,9 @@ Time to calculate results on CPU = 0.294354 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 1 / 100
@@ -235,9 +235,9 @@ Time to calculate results on CPU = 0.277403 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 2 / 100
@@ -304,9 +304,9 @@ Time to calculate results on CPU = 0.279857 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 3 / 100
@@ -373,9 +373,9 @@ Time to calculate results on CPU = 0.283383 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 4 / 100
@@ -442,9 +442,9 @@ Time to calculate results on CPU = 3.339417 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 5 / 100
@@ -511,9 +511,9 @@ Time to calculate results on CPU = 0.297164 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 6 / 100
@@ -580,9 +580,9 @@ Time to calculate results on CPU = 12.341969 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 7 / 100
@@ -649,9 +649,9 @@ Time to calculate results on CPU = 0.28454 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 8 / 100
@@ -718,9 +718,9 @@ Time to calculate results on CPU = 0.277997 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 9 / 100
@@ -787,9 +787,9 @@ Time to calculate results on CPU = 4.346392 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 10 / 100
@@ -856,9 +856,9 @@ Time to calculate results on CPU = 0.278494 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 11 / 100
@@ -925,9 +925,9 @@ Time to calculate results on CPU = 0.272313 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 12 / 100
@@ -994,9 +994,9 @@ Time to calculate results on CPU = 1.805197 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 13 / 100
@@ -1063,9 +1063,9 @@ Time to calculate results on CPU = 0.311507 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 14 / 100
@@ -1132,9 +1132,9 @@ Time to calculate results on CPU = 0.283907 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 15 / 100
@@ -1201,9 +1201,9 @@ Time to calculate results on CPU = 0.294404 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 16 / 100
@@ -1270,9 +1270,9 @@ Time to calculate results on CPU = 0.302675 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 17 / 100
@@ -1339,9 +1339,9 @@ Time to calculate results on CPU = 0.303141 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 18 / 100
@@ -1408,9 +1408,9 @@ Time to calculate results on CPU = 0.279264 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 19 / 100
@@ -1477,9 +1477,9 @@ Time to calculate results on CPU = 0.286698 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 20 / 100
@@ -1546,9 +1546,9 @@ Time to calculate results on CPU = 0.274791 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 21 / 100
@@ -1615,9 +1615,9 @@ Time to calculate results on CPU = 0.274745 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 22 / 100
@@ -1684,9 +1684,9 @@ Time to calculate results on CPU = 0.271631 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 23 / 100
@@ -1753,9 +1753,9 @@ Time to calculate results on CPU = 0.272154 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 24 / 100
@@ -1822,9 +1822,9 @@ Time to calculate results on CPU = 0.275104 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 25 / 100
@@ -1891,9 +1891,9 @@ Time to calculate results on CPU = 0.287528 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 26 / 100
@@ -1960,9 +1960,9 @@ Time to calculate results on CPU = 0.274308 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 27 / 100
@@ -2029,9 +2029,9 @@ Time to calculate results on CPU = 0.271741 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 28 / 100
@@ -2098,9 +2098,9 @@ Time to calculate results on CPU = 0.271574 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 29 / 100
@@ -2167,9 +2167,9 @@ Time to calculate results on CPU = 0.270151 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 30 / 100
@@ -2236,9 +2236,9 @@ Time to calculate results on CPU = 0.272177 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 31 / 100
@@ -2305,9 +2305,9 @@ Time to calculate results on CPU = 0.272514 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 32 / 100
@@ -2374,9 +2374,9 @@ Time to calculate results on CPU = 0.331655 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 33 / 100
@@ -2443,9 +2443,9 @@ Time to calculate results on CPU = 0.278798 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 34 / 100
@@ -2512,9 +2512,9 @@ Time to calculate results on CPU = 0.277598 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 35 / 100
@@ -2581,9 +2581,9 @@ Time to calculate results on CPU = 0.28335 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 36 / 100
@@ -2650,9 +2650,9 @@ Time to calculate results on CPU = 0.405468 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 37 / 100
@@ -2719,9 +2719,9 @@ Time to calculate results on CPU = 0.31676 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 38 / 100
@@ -2788,9 +2788,9 @@ Time to calculate results on CPU = 0.306031 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 39 / 100
@@ -2857,9 +2857,9 @@ Time to calculate results on CPU = 0.277947 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 40 / 100
@@ -2926,9 +2926,9 @@ Time to calculate results on CPU = 0.304454 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 41 / 100
@@ -2995,9 +2995,9 @@ Time to calculate results on CPU = 0.276054 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 42 / 100
@@ -3064,9 +3064,9 @@ Time to calculate results on CPU = 0.278574 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 43 / 100
@@ -3133,9 +3133,9 @@ Time to calculate results on CPU = 0.339998 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 44 / 100
@@ -3202,9 +3202,9 @@ Time to calculate results on CPU = 0.275841 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 45 / 100
@@ -3271,9 +3271,9 @@ Time to calculate results on CPU = 0.298706 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 46 / 100
@@ -3340,9 +3340,9 @@ Time to calculate results on CPU = 0.541855 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 47 / 100
@@ -3409,9 +3409,9 @@ Time to calculate results on CPU = 0.268171 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 48 / 100
@@ -3478,9 +3478,9 @@ Time to calculate results on CPU = 0.265228 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 49 / 100
@@ -3547,9 +3547,9 @@ Time to calculate results on CPU = 0.273864 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 50 / 100
@@ -3616,9 +3616,9 @@ Time to calculate results on CPU = 0.269404 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 51 / 100
@@ -3685,9 +3685,9 @@ Time to calculate results on CPU = 0.260355 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 52 / 100
@@ -3754,9 +3754,9 @@ Time to calculate results on CPU = 0.274928 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 53 / 100
@@ -3823,9 +3823,9 @@ Time to calculate results on CPU = 0.271735 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 54 / 100
@@ -3892,9 +3892,9 @@ Time to calculate results on CPU = 0.270768 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 55 / 100
@@ -3961,9 +3961,9 @@ Time to calculate results on CPU = 0.284521 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 56 / 100
@@ -4030,9 +4030,9 @@ Time to calculate results on CPU = 0.271171 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 57 / 100
@@ -4099,9 +4099,9 @@ Time to calculate results on CPU = 0.271091 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 58 / 100
@@ -4168,9 +4168,9 @@ Time to calculate results on CPU = 0.276158 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 59 / 100
@@ -4237,9 +4237,9 @@ Time to calculate results on CPU = 0.287928 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 60 / 100
@@ -4306,9 +4306,9 @@ Time to calculate results on CPU = 0.303417 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 61 / 100
@@ -4375,9 +4375,9 @@ Time to calculate results on CPU = 0.291711 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 62 / 100
@@ -4444,9 +4444,9 @@ Time to calculate results on CPU = 0.285955 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 63 / 100
@@ -4513,9 +4513,9 @@ Time to calculate results on CPU = 0.293247 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 64 / 100
@@ -4582,9 +4582,9 @@ Time to calculate results on CPU = 0.271717 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 65 / 100
@@ -4651,9 +4651,9 @@ Time to calculate results on CPU = 0.27739 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 66 / 100
@@ -4720,9 +4720,9 @@ Time to calculate results on CPU = 0.289196 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 67 / 100
@@ -4789,9 +4789,9 @@ Time to calculate results on CPU = 0.268316 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 68 / 100
@@ -4858,9 +4858,9 @@ Time to calculate results on CPU = 0.265 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 69 / 100
@@ -4927,9 +4927,9 @@ Time to calculate results on CPU = 0.268234 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 70 / 100
@@ -4996,9 +4996,9 @@ Time to calculate results on CPU = 0.273828 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 71 / 100
@@ -5065,9 +5065,9 @@ Time to calculate results on CPU = 0.266814 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 72 / 100
@@ -5134,9 +5134,9 @@ Time to calculate results on CPU = 0.267553 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 73 / 100
@@ -5203,9 +5203,9 @@ Time to calculate results on CPU = 0.266914 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 74 / 100
@@ -5272,9 +5272,9 @@ Time to calculate results on CPU = 0.270125 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 75 / 100
@@ -5341,9 +5341,9 @@ Time to calculate results on CPU = 0.270178 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 76 / 100
@@ -5410,9 +5410,9 @@ Time to calculate results on CPU = 0.270554 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 77 / 100
@@ -5477,9 +5477,9 @@ Time to calculate results on CPU = 0.260847 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 78 / 100
@@ -5544,9 +5544,9 @@ Time to calculate results on CPU = 0.258915 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 79 / 100
@@ -5611,9 +5611,9 @@ Time to calculate results on CPU = 0.282707 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 80 / 100
@@ -5678,9 +5678,9 @@ Time to calculate results on CPU = 0.271658 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 81 / 100
@@ -5745,9 +5745,9 @@ Time to calculate results on CPU = 0.261271 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 82 / 100
@@ -5812,9 +5812,9 @@ Time to calculate results on CPU = 0.265254 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 83 / 100
@@ -5879,9 +5879,9 @@ Time to calculate results on CPU = 0.268503 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 84 / 100
@@ -5946,9 +5946,9 @@ Time to calculate results on CPU = 0.263103 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 85 / 100
@@ -6013,9 +6013,9 @@ Time to calculate results on CPU = 0.27234 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 86 / 100
@@ -6080,9 +6080,9 @@ Time to calculate results on CPU = 0.275577 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 87 / 100
@@ -6147,9 +6147,9 @@ Time to calculate results on CPU = 0.27238 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 88 / 100
@@ -6214,9 +6214,9 @@ Time to calculate results on CPU = 0.28278 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 89 / 100
@@ -6277,9 +6277,9 @@ Time to calculate results on CPU = 0.252897 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 90 / 100
@@ -6340,9 +6340,9 @@ Time to calculate results on CPU = 0.262438 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 91 / 100
@@ -6403,9 +6403,9 @@ Time to calculate results on CPU = 0.250921 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 92 / 100
@@ -6466,9 +6466,9 @@ Time to calculate results on CPU = 0.252161 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 93 / 100
@@ -6529,9 +6529,9 @@ Time to calculate results on CPU = 0.256984 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 94 / 100
@@ -6592,9 +6592,9 @@ Time to calculate results on CPU = 0.259008 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 95 / 100
@@ -6655,9 +6655,9 @@ Time to calculate results on CPU = 0.258224 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 96 / 100
@@ -6718,9 +6718,9 @@ Time to calculate results on CPU = 0.253787 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 97 / 100
@@ -6781,9 +6781,9 @@ Time to calculate results on CPU = 0.256337 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 98 / 100
@@ -6842,9 +6842,9 @@ Time to calculate results on CPU = 0.252663 ms
 
 
 ===============================
-	D P M  						
- 			 					
-		N V E 					
+	D P M
+
+		N V E
 ===============================
 
 	** t / NT	= 99 / 100
@@ -6855,4 +6855,4 @@ Time to calculate results on CPU = 0.252663 ms
 ** In printConfiguration2D, printing particle positions to file...
 
 
-** Finished dpmNVEtest.cpp, ending. 
+** Finished dpmNVEtest.cpp, ending.
