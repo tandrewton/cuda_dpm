@@ -83,7 +83,7 @@ __global__ void kernelVertexForces(double* radius, double* pos, double* force, d
       }
     }
   }
-  printf("total energy = %f\n", energy[vertexID]);
+  // printf("total energy = %f\n", energy[vertexID]);
 }
 
 /******************************
@@ -2607,6 +2607,13 @@ void dpm::cudaVertexNVE(ofstream& enout, double T, double dt0, int NT, int NPRIN
     if (t % NPRINTSKIP == 0) {
       // compute kinetic energy
       K = vertexKineticEnergy();
+
+      if (std::isnan(K)) {
+        cout << "K is nan!\n";
+        for (int i = 0; i < vertDOF; i++) {
+          cout << "v[" << i << "] = " << v[i] << '\n';
+        }
+      }
 
       // print to console
       cout << endl
