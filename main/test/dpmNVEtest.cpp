@@ -47,7 +47,7 @@ int main() {
 
   forceUpdate = &dpm::repulsiveForceUpdate;
 
-  configobj2D.gaussian2D(0.0, calA0, nsmall);
+  configobj2D.monodisperse2D(calA0, nsmall);
 
   // initialize particle positions
   configobj2D.initializePositions2D(phi0, Ftol);
