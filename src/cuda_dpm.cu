@@ -82,6 +82,7 @@ __global__ void kernelVertexForces(double* radius, double* pos, double* force, d
       }
     }
   }
+  printf("total energy = %f\n", energy);
 }
 
 /******************************
