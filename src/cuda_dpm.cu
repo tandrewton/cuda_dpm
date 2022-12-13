@@ -2548,12 +2548,12 @@ void dpm::cudaVertexNVE(ofstream& enout, double T, double dt0, int NT, int NPRIN
   size_t sizeF = F.size() * sizeof(double);
   size_t sizeVertexEnergy = vertexEnergy.size() * sizeof(double);
 
+  double *dev_r, *dev_x, *dev_F, *dev_vertexEnergy;
+
   cudaMalloc((void**)&dev_r, sizeR);  // allocate memory on device
   cudaMalloc((void**)&dev_x, sizeX);
   cudaMalloc((void**)&dev_F, sizeF);
   cudaMalloc((void**)&dev_vertexEnergy, sizeVertexEnergy);
-
-  double *dev_r, *dev_x, *dev_F, *dev_vertexEnergy;
 
   // loop over time, print energy
   for (t = 0; t < NT; t++) {
