@@ -1751,8 +1751,6 @@ void dpm::vertexRepulsiveForces2D() {
           if (dy < sij) {
             rij = sqrt(dx * dx + dy * dy);
             if (rij < sij) {
-              printf("gi %d interacting with gj %d at positions %f \t %f, %f \t %f with sij %f and force %f %f\n", gi, gj, x[NDIM * gi], x[NDIM * gi + 1], x[NDIM * gj], x[NDIM * gj + 1], sij, fx, fy);
-
               //  force scale
               ftmp = kc * (1 - (rij / sij)) * (rho0 / sij);
               fx = ftmp * (dx / rij);
@@ -1767,6 +1765,8 @@ void dpm::vertexRepulsiveForces2D() {
 
               // increase potential energy
               U += 0.5 * kc * pow((1 - (rij / sij)), 2.0);
+
+              printf("gi %d - gj %d at pos %f \t %f, %f \t %f, sij %f, force %f %f, ftmp %f, dx %f, rij %f, dU %f\n", gi, gj, x[NDIM * gi], x[NDIM * gi + 1], x[NDIM * gj], x[NDIM * gj + 1], sij, fx, fy, ftmp, dx, rij, 0.5 * kc * pow((1 - (rij / sij)), 2.0));
 
               // add to virial stress
               stress[0] += dx * fx;
